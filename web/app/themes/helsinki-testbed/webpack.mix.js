@@ -17,7 +17,7 @@ require('palette-webpack-plugin/src/mix');
  */
 
 mix.setPublicPath('./dist')
-   .browserSync('sage.test');
+   .browserSync('helsinki-testbed.test');
 
 mix.sass('resources/assets/styles/app.scss', 'styles')
    .sass('resources/assets/styles/admin.scss', 'styles')

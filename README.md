@@ -1,4 +1,4 @@
-# <example-project>
+# helsinki-testbed
 
 > **Note, here's a [diff](https://github.com/generoi/bedrock/compare/genero...roots:master) of upstream commits missing from our bedrock fork**
 
@@ -47,8 +47,8 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 
 #### Working from host machine (macOS)
 
-    git clone --recursive git@github.com:generoi/<example-project>.git <example-project>
-    cd <example-project>
+    git clone --recursive git@github.com:generoi/helsinki-testbed.git helsinki-testbed
+    cd helsinki-testbed
 
     # Install composer dependencies and development tools
     composer install:development
@@ -65,7 +65,7 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
     git commit --amend -n
 
     # Watch/build theme assets
-    cd web/app/themes/<example-project>
+    cd web/app/themes/helsinki-testbed
     npm run build
     npm run build:production
     npm run start
@@ -88,7 +88,7 @@ The basic setup for a Windows + WSL + Vagrant -based solution is as follows:
 With WSL and Vagrant installed in Windows, follow these steps:
 
     # Clone the project
-    git clone --recursive git@github.com:generoi/<example-project>.git <example-project>
+    git clone --recursive git@github.com:generoi/helsinki-testbed.git helsinki-testbed
 
     # Start and login to the WSL. The rest of the commands are run in WSL.
 
@@ -110,7 +110,7 @@ With WSL and Vagrant installed in Windows, follow these steps:
     ssh-add <path-to-your-private-key>
 
     # Prepare the project (resides on windows drive)
-    cd /mnt/<drive>/<example-project>
+    cd /mnt/<drive>/helsinki-testbed
 
     # Install composer dependencies
     composer install:development
@@ -119,12 +119,12 @@ With WSL and Vagrant installed in Windows, follow these steps:
     vagrant up
 
     # Fetch the remote database and uploads
-    cd web/app/themes/<example-project>
+    cd web/app/themes/helsinki-testbed
     ./vendor/bin/robo db:pull @production
     ./vendor/bin/robo files:pull @production
 
     # Build and watch theme assets
-    cd web/app/themes/<example-project>
+    cd web/app/themes/helsinki-testbed
     npm run build
     npm run build:production
     npm run start
@@ -132,8 +132,8 @@ With WSL and Vagrant installed in Windows, follow these steps:
 In order to be able to access the site in Windows, you'll have to modify your
 hosts files manually, as this is only done in WSL for you. Check the hosts
 configuration in WSL with `cat /etc/hosts` and copy the parts relating to
-`<example-project>.test` to `c:\Windows\System32\drives\etc\hosts` in Windows.
-After that, you can access the site at `http://<example-project>.test`.
+`helsinki-testbed.test` to `c:\Windows\System32\drives\etc\hosts` in Windows.
+After that, you can access the site at `http://helsinki-testbed.test`.
 
 When managing your repository in Windows, you'll want to disable git hooks as
 they rely on commands that only work in WSL for you.

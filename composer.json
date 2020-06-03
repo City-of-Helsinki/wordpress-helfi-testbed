@@ -107,7 +107,7 @@
       "php": "7.2.18"
     },
     "process-timeout": 0,
-    "theme-dir": "web/app/themes/<example-project>"
+    "theme-dir": "web/app/themes/helsinki-testbed"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

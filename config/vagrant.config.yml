@@ -1,8 +1,8 @@
 ---
 # Site specific overrides.
 
-vagrant_hostname: <example-project>.test
-vagrant_machine_name: <example-project>
+vagrant_hostname: helsinki-testbed.test
+vagrant_machine_name: helsinki-testbed
 
 # On windows this will automatically be changed to `vboxsf`
 # @see Vagrantfile.local

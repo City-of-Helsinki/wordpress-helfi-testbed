@@ -7,27 +7,27 @@ require:
 
 # Requires the following in your ~/.ssh/config
 #
-#     Host <example-project>.test
+#     Host helsinki-testbed.test
 #       StrictHostKeyChecking no
 #       IdentityFile ~/.vagrant.d/insecure_private_key
 #
-#     Host <example-project>.fi
+#     Host helsinki-testbed.fi
 #       ProxyCommand ssh deploy@minasithil.genero.fi -W %h:%p
 
 '@docker':
   path: /var/www/html/web/wp
-  url: <example-project>.ddev.local
+  url: helsinki-testbed.ddev.local
 
 '@dev':
-  ssh: vagrant@<example-project>.test/var/www/wordpress/web/wp
-  url: <example-project>.test
+  ssh: vagrant@helsinki-testbed.test/var/www/wordpress/web/wp
+  url: helsinki-testbed.test
 
 '@staging':
-  ssh: deploy@minasithil.genero.fi/var/www/staging/<example-project>/current/web/wp
-  url: <example-project>.web.staging.minasithil.genero.fi
+  ssh: deploy@minasithil.genero.fi/var/www/staging/helsinki-testbed/current/web/wp
+  url: helsinki-testbed.web.staging.minasithil.genero.fi
 
 '@production':
-  ssh: deploy@<example-project>.fi/home/www/<example-project>/deploy/current/web/wp
-  url: <example-project>.fi
+  ssh: deploy@helsinki-testbed.fi/home/www/helsinki-testbed/deploy/current/web/wp
+  url: helsinki-testbed.fi
   # bin_path: $HOME/.config/composer/vendor/bin
   # php_path: /usr/bin/php72

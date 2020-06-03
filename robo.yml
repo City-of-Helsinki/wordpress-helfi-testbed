@@ -1,4 +1,4 @@
-machine_name: sage
+machine_name: helsinki-testbed
 theme_path: 'web/app/themes/${machine_name}'
 organization: generoi
 placeholders:

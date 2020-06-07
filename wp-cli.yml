@@ -1,0 +1,33 @@
+path: web/wp
+server:
+  docroot: web
+
+require:
+  - vendor/generoi/genero-conf/wp/wp-cli-pre-ssh.php
+
+# Requires the following in your ~/.ssh/config
+#
+#     Host <example-project>.test
+#       StrictHostKeyChecking no
+#       IdentityFile ~/.vagrant.d/insecure_private_key
+#
+#     Host <example-project>.fi
+#       ProxyCommand ssh deploy@minasithil.genero.fi -W %h:%p
+
+'@docker':
+  path: /var/www/html/web/wp
+  url: <example-project>.ddev.local
+
+'@dev':
+  ssh: vagrant@<example-project>.test/var/www/wordpress/web/wp
+  url: <example-project>.test
+
+'@staging':
+  ssh: deploy@minasithil.genero.fi/var/www/staging/<example-project>/current/web/wp
+  url: <example-project>.web.staging.minasithil.genero.fi
+
+'@production':
+  ssh: deploy@<example-project>.fi/home/www/<example-project>/deploy/current/web/wp
+  url: <example-project>.fi
+  # bin_path: $HOME/.config/composer/vendor/bin
+  # php_path: /usr/bin/php72

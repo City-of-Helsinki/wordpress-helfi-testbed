@@ -1,0 +1,52 @@
+# OS X .gitignore
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/languages/*
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/advanced-cache.php
+web/genero-status.php
+
+# WordPress
+web/wp
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# Node Package Manager
+node_modules
+npm-debug.log
+
+# Vagrant
+.vagrant
+
+# Deployer
+.build
+
+# Logs
+log
+*.log
+
+# Sensitive files
+*.sql
+
+# Local configuration
+local.config.yml
+
+# WP-CLI
+wp-cli.local.yml

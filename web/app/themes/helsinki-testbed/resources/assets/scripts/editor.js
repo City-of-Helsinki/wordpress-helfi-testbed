@@ -45,6 +45,35 @@ const withDefaultBackgroundColor = createHigherOrderComponent(BlockListBlock => 
     return <BlockListBlock { ...props } />;
   };
 }, 'withDefaultBackgroundColor' );
+/**
+ * Sets default color for buttons with outline style.
+ */
+const withDefaultColor = createHigherOrderComponent(BlockListBlock => {
+  return (props) => {
+    if (
+      props.name === 'core/button' &&
+      props.attributes.className &&
+      props.attributes.className.indexOf('is-style-outline') !== -1 &&
+      !props.attributes.textColor
+    ) {
+      props.attributes.textColor = 'dark-grey';
+    }
+    return <BlockListBlock { ...props } />;
+  };
+}, 'withDefaultColor' );
+/**
+ * Removes border radius from buttons.
+ */
+const withRemoveBorderRadius = createHigherOrderComponent(BlockListBlock => {
+  return (props) => {
+    if (
+      props.name === 'core/button'
+    ) {
+      props.attributes.borderRadius = undefined;
+    }
+    return <BlockListBlock { ...props } />;
+  };
+}, 'withRemoveBorderRadius' );
 
 domReady(() => {
   unregisterBlockStyle('core/button', 'outline');
@@ -66,6 +95,14 @@ domReady(() => {
   addFilter(
     'editor.BlockListBlock', 'sage/with-default-background-color-fill',
     withDefaultBackgroundColor
+  );
+  addFilter(
+    'editor.BlockListBlock', 'sage/with-default-color',
+    withDefaultColor
+  );
+  addFilter(
+    'editor.BlockListBlock', 'sage/with-remove-border-radius',
+    withRemoveBorderRadius
   );
 
   fontawesome();

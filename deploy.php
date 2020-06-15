@@ -104,10 +104,6 @@ task('cache:clear:kinsta', function () {
     run('curl {{ url }}/kinsta-clear-cache-all/');
 });
 
-task('cache:acorn:optimize', function () {
-    run('cd {{release_path}}/web && {{bin/wp}} acorn optimize');
-});
-
 /**
  * Deploy
  */
@@ -116,7 +112,6 @@ task('cache:clear', [
     'cache:clear:wp:wpsc',
     'cache:clear:kinsta',
     'cache:clear:wp:objectcache',
-    'cache:acorn:optimize',
 ]);
 
 task('build:assets', function () {

@@ -84,10 +84,9 @@ if (!empty($prod = $robo['env']['@production'])) {
         ->hostname($prod['host'])
         ->port($prod['port'] ?? 22)
         ->user($prod['user'])
+        ->set('url', $prod['url'])
         ->set('deploy_path', dirname($prod['path']))
-        // ->set('http_user', 'apache')
-        // ->set('bin/wp', '/usr/local/bin/wp')
-        ->set('cachetool', '127.0.0.1:11000');
+        ->set('bin/wp', '{{ release_path }}/vendor/bin/wp');
 }
 
 if (!empty($staging = $robo['env']['@staging'])) {
@@ -95,9 +94,19 @@ if (!empty($staging = $robo['env']['@staging'])) {
         ->hostname($staging['host'])
         ->port($staging['port'] ?? 22)
         ->user($staging['user'])
+        ->set('url', $prod['url'])
         ->set('http_user', 'www-data')
-        ->set('deploy_path', dirname($staging['path']));
+        ->set('deploy_path', dirname($staging['path']))
+        ->set('bin/wp', '{{ release_path }}/vendor/bin/wp');
 }
+
+task('cache:clear:kinsta', function () {
+    run('curl {{ url }}/kinsta-clear-cache-all/');
+});
+
+task('cache:acorn:optimize', function () {
+    run('cd {{release_path}}/web && {{bin/wp}} acorn optimize');
+});
 
 /**
  * Deploy
@@ -105,10 +114,9 @@ if (!empty($staging = $robo['env']['@staging'])) {
 desc('Clear caches');
 task('cache:clear', [
     'cache:clear:wp:wpsc',
-    'cachetool:clear:opcache',
+    'cache:clear:kinsta',
     'cache:clear:wp:objectcache',
-    'cache:clear:wp:acorn',
-    'cache:wp:acorn',
+    'cache:acorn:optimize',
 ]);
 
 task('build:assets', function () {

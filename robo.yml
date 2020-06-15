@@ -15,16 +15,19 @@ env:
     path: /var/www/wordpress
     url: 'http://${machine_name}.test'
   '@staging':
-    host: minasithil.genero.fi
-    user: deploy
-    path: '/var/www/staging/${machine_name}/current'
-    ssh: 'ssh -o ForwardAgent=yes'
-    url: 'http://${machine_name}.web.staging.minasithil.genero.fi'
+    host: 35.228.245.82
+    port: 26900
+    user: helsinkitestbed
+    path: '/www/helsinkitestbed_584/public/current'
+    ssh: 'ssh -o ForwardAgent=yes -p 26900'
+    url: 'https://staging-helsinkitestbed.kinsta.cloud'
   '@production':
-    host: '${machine_name}.fi'
-    user: deploy
-    path: '/home/www/${machine_name}/deploy/current'
-    url: 'https://${machine_name}.fi'
+    host: 35.228.245.82
+    port: 17538
+    user: helsinkitestbed
+    ssh: 'ssh -p 17538'
+    path: '/www/helsinkitestbed_584/public/current'
+    url: 'https://helsinkitestbed.kinsta.cloud'
 command:
   build:
     production:

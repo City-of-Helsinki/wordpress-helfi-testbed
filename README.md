@@ -1,5 +1,12 @@
 # helsinki-testbed
 
+
+| Environment | URL |
+|-|-|
+| Development | http://helsinki-testbed.test |
+| Staging | https://staging-helsinkitestbed.kinsta.cloud |
+| Live | https://helsinkitestbed.kinsta.cloud |
+
 > **Note, here's a [diff](https://github.com/generoi/bedrock/compare/genero...roots:master) of upstream commits missing from our bedrock fork**
 
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.

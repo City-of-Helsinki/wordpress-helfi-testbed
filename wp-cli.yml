@@ -23,11 +23,11 @@ require:
   url: helsinki-testbed.test
 
 '@staging':
-  ssh: deploy@minasithil.genero.fi/var/www/staging/helsinki-testbed/current/web/wp
-  url: helsinki-testbed.web.staging.minasithil.genero.fi
+  ssh: helsinkitestbed@35.228.245.82:26900/www/helsinkitestbed_584/public/current/web/wp
+  url: staging-helsinkitestbed.kinsta.cloud
 
 '@production':
-  ssh: deploy@helsinki-testbed.fi/home/www/helsinki-testbed/deploy/current/web/wp
-  url: helsinki-testbed.fi
+  ssh: helsinkitestbed@35.228.245.82:17538/www/helsinkitestbed_584/public/current/web/wp
+  url: helsinkitestbed.kinsta.cloud
   # bin_path: $HOME/.config/composer/vendor/bin
   # php_path: /usr/bin/php72

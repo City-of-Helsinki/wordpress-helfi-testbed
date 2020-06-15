@@ -20,6 +20,8 @@ set('ssh_multiplexing', true);
 set('shared_files', ['.env']);
 set('shared_dirs', ['web/app/uploads']);
 set('writable_dirs', array_merge(get('shared_dirs'), ['{{theme_dir}}/storage', 'web/app/cache']));
+set('writable_mode', 'chmod');
+set('writable_use_sudo', false);
 
 set('bin/robo', './vendor/bin/robo');
 set('bin/wp', './vendor/bin/wp');
@@ -80,6 +82,7 @@ require 'vendor/generoi/deployer-genero/wordpress.php';
 if (!empty($prod = $robo['env']['@production'])) {
     host('production')
         ->hostname($prod['host'])
+        ->port($prod['port'] ?? 22)
         ->user($prod['user'])
         ->set('deploy_path', dirname($prod['path']))
         // ->set('http_user', 'apache')
@@ -90,6 +93,7 @@ if (!empty($prod = $robo['env']['@production'])) {
 if (!empty($staging = $robo['env']['@staging'])) {
     host('staging')
         ->hostname($staging['host'])
+        ->port($staging['port'] ?? 22)
         ->user($staging['user'])
         ->set('http_user', 'www-data')
         ->set('deploy_path', dirname($staging['path']));

@@ -19,7 +19,14 @@
   // instead. This has to be duplicated here from the globals since the
   // background color has to apply to the inner content element instead of where
   // the class is located.
-  background-color: transparent !important;
+  @if $is-frontend {
+    background-color: transparent !important;
+  }
+  @if not $is-frontend {
+    @at-root .wp-block[data-type="core/media-text"] {
+      background-color: transparent !important;
+    }
+  }
   @each $color-name, $color-value in $color-palette {
     @if $is-frontend {
       &.has-#{$color-name}-background-color .wp-block-media-text__content {
@@ -27,7 +34,7 @@
       }
     }
     @if not $is-frontend {
-      &.has-#{$color-name}-background-color .block-editor-inner-blocks {
+      @at-root .wp-block[data-type="core/media-text"].has-#{$color-name}-background-color .block-editor-inner-blocks {
         background-color: $color-value;
       }
     }

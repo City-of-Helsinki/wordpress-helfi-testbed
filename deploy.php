@@ -20,6 +20,8 @@ set('ssh_multiplexing', true);
 set('shared_files', ['.env']);
 set('shared_dirs', ['web/app/uploads']);
 set('writable_dirs', array_merge(get('shared_dirs'), ['{{theme_dir}}/storage', 'web/app/cache']));
+set('writable_mode', 'chmod');
+set('writable_use_sudo', false);
 
 set('bin/robo', './vendor/bin/robo');
 set('bin/wp', './vendor/bin/wp');
@@ -80,20 +82,27 @@ require 'vendor/generoi/deployer-genero/wordpress.php';
 if (!empty($prod = $robo['env']['@production'])) {
     host('production')
         ->hostname($prod['host'])
+        ->port($prod['port'] ?? 22)
         ->user($prod['user'])
+        ->set('url', $prod['url'])
         ->set('deploy_path', dirname($prod['path']))
-        // ->set('http_user', 'apache')
-        // ->set('bin/wp', '/usr/local/bin/wp')
-        ->set('cachetool', '127.0.0.1:11000');
+        ->set('bin/wp', '{{ release_path }}/vendor/bin/wp');
 }
 
 if (!empty($staging = $robo['env']['@staging'])) {
     host('staging')
         ->hostname($staging['host'])
+        ->port($staging['port'] ?? 22)
         ->user($staging['user'])
+        ->set('url', $prod['url'])
         ->set('http_user', 'www-data')
-        ->set('deploy_path', dirname($staging['path']));
+        ->set('deploy_path', dirname($staging['path']))
+        ->set('bin/wp', '{{ release_path }}/vendor/bin/wp');
 }
+
+task('cache:clear:kinsta', function () {
+    run('curl {{ url }}/kinsta-clear-cache-all/');
+});
 
 /**
  * Deploy
@@ -101,10 +110,8 @@ if (!empty($staging = $robo['env']['@staging'])) {
 desc('Clear caches');
 task('cache:clear', [
     'cache:clear:wp:wpsc',
-    'cachetool:clear:opcache',
+    'cache:clear:kinsta',
     'cache:clear:wp:objectcache',
-    'cache:clear:wp:acorn',
-    'cache:wp:acorn',
 ]);
 
 task('build:assets', function () {

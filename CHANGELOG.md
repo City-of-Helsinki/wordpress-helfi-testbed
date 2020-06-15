@@ -7,6 +7,7 @@
 - Updated padding and font size for Button block.
 - Removed border radius option for Button block.
 - Changed default color for Button block.
+- Configure staging/production environments
 
 ## 0.1.0
 

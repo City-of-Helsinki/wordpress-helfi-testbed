@@ -133,6 +133,10 @@ Config::define('WPMS_SMTP_PORT', env('WPMS_SMTP_PORT') ?: 465);
 Config::define('WPMS_SSL', env('WPMS_SSL') ?: 'ssl');
 Config::define('WPMS_SMTP_AUTH', env('WPMS_SMTP_AUTH') ?: false);
 
+
+/** Kinsta */
+Config::define('KINSTA_CDN_USERDIRS', 'app');
+
 /**
  * Debugging Settings
  */

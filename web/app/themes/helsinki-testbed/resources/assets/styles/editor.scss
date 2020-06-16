@@ -7,6 +7,8 @@
 @import 'config/variables';
 @import 'config/external';
 
+@import 'common/fonts';
+
 // Disable frontend specific styles.
 $is-frontend: false;
 
@@ -45,6 +47,7 @@ $is-frontend: false;
 
   @import 'common/foundation';
   @import 'common/global';
+  @import 'common/typography';
   @import 'components';
   @import 'blocks';
 }

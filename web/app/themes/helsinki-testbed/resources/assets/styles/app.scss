@@ -7,9 +7,11 @@
 @import 'config/external';
 
 /** Common */
+@import 'common/fonts';
 @import 'common/foundation';
 @import 'common/frontend';
 @import 'common/global';
+@import 'common/typography';
 
 /** Components */
 @import 'components';

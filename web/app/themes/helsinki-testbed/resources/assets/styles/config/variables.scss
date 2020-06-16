@@ -25,8 +25,8 @@ $foundation-palette: map-merge(
 $black: get-color('black');
 $white: get-color('white');
 // $body-background: $white;
-// $body-font-color: $black;
-// $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: get-color(dark-grey);
+$body-font-family: "HelsinkiGrotesk", Georgia, "Times", "Times New Roman", serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
 // $global-padding: 1rem;

@@ -1,0 +1,45 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "HelsinkiGrotesk", Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.25;
+
+  @include breakpoint(medium up) {
+    font-size: 52px;
+    line-height: 1.19;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 1.19;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+blockquote {
+  font-size: 22px;
+  line-height: 1.55;
+  font-style: italic;
+}

@@ -8,6 +8,7 @@
 - Removed border radius option for Button block.
 - Changed default color for Button block.
 - Configure staging/production environments
+- Added typography styles.
 
 ## 0.1.0
 

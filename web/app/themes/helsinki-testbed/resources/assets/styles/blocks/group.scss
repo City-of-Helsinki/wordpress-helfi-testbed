@@ -35,4 +35,80 @@
       }
     }
   }
+
+  &[class*='is-style-koro-'] {
+    position: relative;
+
+    // On the frontend move the block so that the effect is on top of an
+    // adjacent block. This is not done in the editor in order not to obstruct
+    // any controls.
+    @if $is-frontend {
+      &[class*='is-style-koro-top-'] {
+        top: -48px;
+        margin-bottom: -48px;
+
+        @include breakpoint(medium up) {
+          top: -72px;
+          margin-bottom: -75px;
+        }
+      }
+      &[class*='is-style-koro-bottom-'] {
+        bottom: -48px;
+        margin-top: -48px;
+
+        @include breakpoint(medium up) {
+          bottom: -72px;
+          margin-top: -75px;
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      pointer-events: none;
+    }
+  }
+
+  &[class*='is-style-koro-top-'] {
+    &:before {
+      top: 1px;
+      transform: translateY(-100%);
+    }
+  }
+
+  &[class*='is-style-koro-bottom-'] {
+    &:before {
+      bottom: 1px;
+      transform: scaleY(-1) translateY(-100%);
+    }
+  }
+
+  .is-style-koro-bottom-basic, .is-style-koro-top-basic {
+    &:before {
+      height: 25px;
+    }
+    @each $color-name, $color-value in $color-palette {
+      &.has-#{$color-name}-background-color:before {
+        background-image: svg-load('./images/koro-basic.svg', fill=$color-value);
+      }
+    }
+  }
+
+  .is-style-koro-bottom-pulse, .is-style-koro-top-pulse {
+    &:before {
+      height: 50px;
+    }
+    @each $color-name, $color-value in $color-palette {
+      &.has-#{$color-name}-background-color:before {
+        background-image: svg-load('./images/koro-pulse.svg', fill=$color-value);
+      }
+    }
+  }
 }

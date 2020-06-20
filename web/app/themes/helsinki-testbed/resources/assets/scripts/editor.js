@@ -88,6 +88,23 @@ domReady(() => {
     label: 'Stylized',
   });
 
+  registerBlockStyle('core/group', {
+    name: 'koro-top-basic',
+    label: 'Basic koro top'
+  })
+  registerBlockStyle('core/group', {
+    name: 'koro-bottom-basic',
+    label: 'Basic koro bottom'
+  })
+  registerBlockStyle('core/group', {
+    name: 'koro-top-pulse',
+    label: 'Pulse koro top'
+  })
+  registerBlockStyle('core/group', {
+    name: 'koro-bottom-pulse',
+    label: 'Pulse koro bottom'
+  })
+
   addFilter(
     'editor.BlockListBlock', 'sage/with-forced-image-fill',
     withForcedImageFill

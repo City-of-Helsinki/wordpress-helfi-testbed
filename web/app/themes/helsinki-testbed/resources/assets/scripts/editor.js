@@ -12,6 +12,8 @@ import { init as fontawesome } from './common/fontawesome';
 import { init as accordion } from './components/accordion';
 import { init as vue } from './vue';
 
+import './editor/blocks/icon-and-text';
+
 const addComponents = (el) => vue(el, {isEditor: true}).finally(() => foundation());
 /**
  * Forces image fill for Media & Text blocks with the stylized style.

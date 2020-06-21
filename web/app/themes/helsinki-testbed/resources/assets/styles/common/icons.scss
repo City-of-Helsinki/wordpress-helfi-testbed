@@ -1,0 +1,16 @@
+$icons: 'book', 'calendar-clock', 'check', 'clock', 'cogwheel', 'envelope',
+  'globe', 'group', 'heart', 'home', 'speechbubble', 'tree';
+
+@each $icon in $icons {
+  .has-#{$icon}-icon {
+    background-image: svg-load('./images/icons/#{$icon}.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    @each $color-name, $color-value in $color-palette {
+      &.has-#{$color-name}-color {
+        background-image: svg-load('./images/icons/#{$icon}.svg', fill=$color-value);
+      }
+    }
+  }
+}

@@ -21,17 +21,17 @@
 
   // Blocks with backgrounds have a padding.
   &.has-background {
-    @include -zf-breakpoint-value(auto, $grid-container-padding) {
-      $gutter: rem-calc($-zf-bp-value);
+    @include -zf-breakpoint-value(auto, $block-paddings) {
+      $padding: $-zf-bp-value;
 
-      padding: ($gutter / 2) $gutter;
+      padding: $padding $padding;
 
       // Let alignfull stretch to the edge.
       // @note increase specificity to override earlier :not():not()
       .alignfull.alignfull {
-        margin-left: -$gutter;
-        margin-right: -$gutter;
-        max-width: calc(100% + #{$gutter * 2});
+        margin-left: -$padding;
+        margin-right: -$padding;
+        max-width: calc(100% + #{$padding * 2});
       }
     }
   }

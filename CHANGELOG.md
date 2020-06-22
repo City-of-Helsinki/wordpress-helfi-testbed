@@ -10,6 +10,7 @@
 - Configure staging/production environments
 - Added typography styles.
 - Added Icon & Text block.
+- Updated spacing around and inside blocks.
 
 ## 0.1.0
 

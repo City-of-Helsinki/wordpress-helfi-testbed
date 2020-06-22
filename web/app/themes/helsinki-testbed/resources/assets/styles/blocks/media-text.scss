@@ -140,6 +140,7 @@
         .wp-block-media-text__media {
           grid-row: 1;
         }
+
         .wp-block-media-text__content {
           grid-row: 2;
         }
@@ -150,12 +151,11 @@
         .editor-media-container__resizer {
           grid-row: 1;
         }
+
         & > .block-editor-inner-blocks {
           grid-row: 2;
         }
       }
     }
   }
-
-
 }

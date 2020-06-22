@@ -10,7 +10,7 @@ import {
 import {
   PanelBody,
   PanelRow,
-  RadioControl
+  RadioControl,
 } from '@wordpress/components'
 
 const DOMAIN = 'hds'

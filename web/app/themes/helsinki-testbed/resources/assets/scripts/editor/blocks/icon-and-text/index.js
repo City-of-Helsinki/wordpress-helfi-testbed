@@ -21,5 +21,5 @@ registerBlockType(name, {
   },
   attributes,
   edit,
-  save
+  save,
 })

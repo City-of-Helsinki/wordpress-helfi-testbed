@@ -52,6 +52,7 @@
           margin-bottom: -75px;
         }
       }
+
       &[class*='is-style-koro-bottom-'] {
         bottom: -48px;
         margin-top: -48px;
@@ -63,7 +64,7 @@
       }
     }
 
-    &:before {
+    &::before {
       content: "";
       z-index: 10;
       position: absolute;
@@ -77,36 +78,38 @@
   }
 
   &[class*='is-style-koro-top-'] {
-    &:before {
+    &::before {
       top: 1px;
       transform: translateY(-100%);
     }
   }
 
   &[class*='is-style-koro-bottom-'] {
-    &:before {
+    &::before {
       bottom: 1px;
       transform: scaleY(-1) translateY(-100%);
     }
   }
 
-  .is-style-koro-bottom-basic, .is-style-koro-top-basic {
-    &:before {
+  .is-style-koro-bottom-basic,
+  .is-style-koro-top-basic {
+    &::before {
       height: 25px;
     }
     @each $color-name, $color-value in $color-palette {
-      &.has-#{$color-name}-background-color:before {
+      &.has-#{$color-name}-background-color::before {
         background-image: svg-load('./images/koro-basic.svg', fill=$color-value);
       }
     }
   }
 
-  .is-style-koro-bottom-pulse, .is-style-koro-top-pulse {
-    &:before {
+  .is-style-koro-bottom-pulse,
+  .is-style-koro-top-pulse {
+    &::before {
       height: 50px;
     }
     @each $color-name, $color-value in $color-palette {
-      &.has-#{$color-name}-background-color:before {
+      &.has-#{$color-name}-background-color::before {
         background-image: svg-load('./images/koro-pulse.svg', fill=$color-value);
       }
     }

@@ -16,14 +16,14 @@ import './editor/blocks/icon-and-text';
 
 const addComponents = (el) => vue(el, {isEditor: true}).finally(() => foundation());
 /**
- * Forces image fill for Media & Text blocks with the stylized style.
+ * Forces image fill for Media & Text blocks with the hover style.
  */
 const withForcedImageFill = createHigherOrderComponent(BlockListBlock => {
   return (props) => {
     if (
       props.name === 'core/media-text' &&
       props.attributes.className &&
-      props.attributes.className.indexOf('is-style-stylized') !== -1
+      props.attributes.className.indexOf('is-style-hover') !== -1
     ) {
       props.attributes.imageFill = true;
     }
@@ -31,7 +31,7 @@ const withForcedImageFill = createHigherOrderComponent(BlockListBlock => {
   };
 }, 'withForcedImageFill' );
 /**
- * Forces a default background color for Media & Text blocks with the stylized
+ * Forces a default background color for Media & Text blocks with the hover
  * style.
  */
 const withDefaultBackgroundColor = createHigherOrderComponent(BlockListBlock => {
@@ -39,7 +39,7 @@ const withDefaultBackgroundColor = createHigherOrderComponent(BlockListBlock => 
     if (
       props.name === 'core/media-text' &&
       props.attributes.className &&
-      props.attributes.className.indexOf('is-style-stylized') !== -1 &&
+      props.attributes.className.indexOf('is-style-hover') !== -1 &&
       !props.attributes.backgroundColor
     ) {
       props.attributes.backgroundColor = 'c-kupari-kupari-light-20';
@@ -86,8 +86,12 @@ domReady(() => {
   });
 
   registerBlockStyle('core/media-text', {
-    name: 'stylized',
-    label: 'Stylized',
+    name: 'hover',
+    label: 'Hover',
+  });
+  registerBlockStyle('core/media-text', {
+    name: 'hover-full',
+    label: 'Hover full width',
   });
 
   registerBlockStyle('core/group', {

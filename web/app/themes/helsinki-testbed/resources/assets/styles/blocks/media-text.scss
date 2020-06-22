@@ -1,19 +1,18 @@
 @import '~@wordpress/base-styles/breakpoints';
 
-// Media and text block is modified so that the content overlaps the image
-// horizontally, and the image over-extends the content vertically. The
-// background color is also only applied to the content part rather than the
+$content-overlap-amount-mobile: 32;
+
+// The "Hover" style modifies Media and text block so that the content overlaps
+// the image horizontally, and the image over-extends the content vertically.
+// The background color is also only applied to the content part rather than the
 // entire block.
-//
-// These changes only apply when "stylized" style is active.
-.wp-block-media-text.is-style-stylized {
+.wp-block-media-text.is-style-hover {
   // Amount in pixels that the image vertically stretches further than the
   // content.
   $image-overextend-amount: 58;
 
   // Amount in pixels that the content overlaps on top of the image horizontally.
   $content-overlap-amount-desktop: 120;
-  $content-overlap-amount-mobile: 32;
 
   // Remove the default background color and sets the color on the content part
   // instead. This has to be duplicated here from the globals since the
@@ -106,7 +105,102 @@
       }
     }
   }
+}
 
+// The "Hover full width" style modifies Media and text block so that the
+// content floats on top of the image and the image stretches the whole width of
+// the block.
+.wp-block-media-text.is-style-hover-full {
+  // Remove the default background color and sets the color on the content part
+  // instead. This has to be duplicated here from the globals since the
+  // background color has to apply to the inner content element instead of where
+  // the class is located.
+  @if $is-frontend {
+    background-color: transparent !important;
+  }
+  @if not $is-frontend {
+    @at-root .wp-block[data-type="core/media-text"] {
+      background-color: transparent !important;
+    }
+  }
+  @each $color-name, $color-value in $color-palette {
+    @if $is-frontend {
+      &.has-#{$color-name}-background-color .wp-block-media-text__content {
+        background-color: $color-value;
+      }
+    }
+    @if not $is-frontend {
+      @at-root .wp-block[data-type="core/media-text"].has-#{$color-name}-background-color .block-editor-inner-blocks {
+        background-color: $color-value;
+      }
+    }
+  }
+
+  // Desktop styles.
+  @media (min-width: #{$break-small + 1}) {
+    // Makes the image part stretch both columns so that it spans the entire
+    // background.
+    @if $is-frontend {
+      & > figure {
+        grid-column-start: 1;
+        grid-column-end: none;
+      }
+
+      &.has-media-on-the-right > figure {
+        grid-column-start: 1;
+        grid-column-end: none;
+      }
+    }
+    @if not $is-frontend {
+      & figure {
+        grid-column-start: 1;
+        grid-column-end: none;
+      }
+
+      &.has-media-on-the-right figure {
+        grid-column-start: 1;
+        grid-column-end: none;
+      }
+    }
+
+    // Adds margin around content so it floats on top of the image. Sets a
+    // padding to the content. Makes the content wider to offset the space lost
+    // to the margin.
+    @if $is-frontend {
+      & .wp-block-media-text__content {
+        position: relative;
+        left: -192px;
+        margin: 58px 96px 90px 0;
+        padding: 40px 49px 40px 27px;
+        width: calc(100% + 96px);
+      }
+      &.has-media-on-the-right .wp-block-media-text__content {
+        left: 0;
+        margin: 58px 0 90px 96px;
+        padding: 40px 27px 40px 49px;
+      }
+    }
+    @if not $is-frontend {
+      & > .block-editor-inner-blocks {
+        position: relative;
+        left: -96px;
+        margin: 58px 0 90px 0;
+        padding: 40px 49px 40px 27px;
+        width: calc(100% + 96px);
+        z-index: 1;
+      }
+      &.has-media-on-the-right > .block-editor-inner-blocks {
+        left: 0;
+        margin: 58px 0 90px 0;
+        padding: 40px 27px 40px 49px;
+      }
+    }
+  }
+}
+
+// Mobile styles are identical for "Hover" and "Hover full width" styles.
+.wp-block-media-text.is-style-hover,
+.wp-block-media-text.is-style-hover-full {
   // Mobile styles.
   @media (max-width: $break-small) {
     // Sets padding around content and moves it so it overlaps the image.

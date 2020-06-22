@@ -4,11 +4,11 @@
 .wp-block-media-text__content,
 .wp-block-column {
   > [class^="wp-block-"] {
-    @include -zf-breakpoint-value(auto, $grid-margin-gutters) {
-      $gutter: rem-calc($-zf-bp-value) / 2;
+    @include -zf-breakpoint-value(auto, $block-margins) {
+      $margin: $-zf-bp-value;
 
-      margin-top: $gutter;
-      margin-bottom: $gutter;
+      margin-top: $margin;
+      margin-bottom: $margin;
 
       &:first-child {
         margin-top: 0;

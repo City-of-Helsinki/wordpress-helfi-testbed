@@ -8,6 +8,15 @@ $content-width-max: rem-calc(674);
 $global-width: rem-calc(1440);
 // $global-lineheight: 1.5;
 
+$block-paddings: (
+  small: 48px,
+  medium: 72px
+);
+$block-margins: (
+  small: 48px,
+  medium: 72px
+);
+
 $foundation-palette: map-merge(
   $color-palette,
   (

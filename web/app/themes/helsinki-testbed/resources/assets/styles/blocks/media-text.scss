@@ -120,11 +120,6 @@
         margin-bottom: -32px;
         padding: 32px 17px;
       }
-
-      &.has-media-on-the-right .wp-block-media-text__content {
-        top: 0;
-        bottom: -$content-overlap-amount-mobile * 1px;
-      }
     }
     @if not $is-frontend {
       & > .block-editor-inner-blocks {
@@ -136,11 +131,31 @@
         margin-bottom: -32px;
         padding: 32px 17px;
       }
+    }
 
-      &.has-media-on-the-right > .block-editor-inner-blocks {
-        top: 0;
-        bottom: -$content-overlap-amount-mobile * 1px;
+    // Moves the content part to be always below the image on mobile regardless
+    // of direction.
+    @if $is-frontend {
+      &.has-media-on-the-right {
+        .wp-block-media-text__media {
+          grid-row: 1;
+        }
+        .wp-block-media-text__content {
+          grid-row: 2;
+        }
+      }
+    }
+    @if not $is-frontend {
+      &.has-media-on-the-right {
+        .editor-media-container__resizer {
+          grid-row: 1;
+        }
+        & > .block-editor-inner-blocks {
+          grid-row: 2;
+        }
       }
     }
   }
+
+
 }

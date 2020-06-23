@@ -1,4 +1,6 @@
 body {
+  font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
+  line-height: $lineheight-l;
   font-size: $global-font-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

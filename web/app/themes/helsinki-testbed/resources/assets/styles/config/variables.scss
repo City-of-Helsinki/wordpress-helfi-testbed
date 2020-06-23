@@ -42,12 +42,10 @@ $color-palette: (
 
 $font-sizes: (
   small: $fontsize-body-small,
-  default: $fontsize-body-default,
   medium: $fontsize-body-medium,
   large: $fontsize-body-large,
 );
 
-$font-family: "HelsinkiGrotesk", Georgia, "Times", "Times New Roman", serif;
 $primary-color: map-get($color-palette, 'primary');
 $global-font-size: 18px;
 $global-width: 1200px;

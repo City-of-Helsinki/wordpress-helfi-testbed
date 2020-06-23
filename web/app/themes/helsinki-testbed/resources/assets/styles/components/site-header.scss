@@ -1,6 +1,5 @@
 .site-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  display: flex;
   align-items: center;
   // @todo grid system
   padding: 15px 12px 10px 12px;
@@ -15,7 +14,8 @@
   }
 
   &__name {
-    //
+    // push remaining columns to the right
+    flex: 1 0 auto;
   }
 
   &__search {

@@ -1,7 +1,8 @@
 function toggleExpanded(e) {
   const el = e.target;
-  const isExpanded = el.ariaExpanded === true || el.ariaExpanded === 'true';
-  el.ariaExpanded = !isExpanded;
+  const ariaExpanded = el.getAttribute('aria-expanded');
+  const isExpanded = ariaExpanded === true || ariaExpanded === 'true';
+  el.setAttribute('aria-expanded', !isExpanded); // ie11 requires setAttribute
 }
 
 export default function navigation(el) {

@@ -54,6 +54,7 @@
     transform: translateY(-1px);
     margin: 0 auto;
     max-width: $global-width;
+    width: 100%; // ie11
     padding-left: 0;
     transition: transform 200ms ease-out;
     // behind pseudo background of main navigation so it's hidden until scrolled past the menu

@@ -9,7 +9,6 @@
 @each $color-name, $color-value in $foundation-palette {
   .has-#{$color-name}-background-color {
     background-color: $color-value !important;
-    color: color-pick-contrast($color-value, ($black, $white)) !important;
   }
 }
 

@@ -47,7 +47,7 @@ $font-sizes: (
 );
 
 $primary-color: map-get($color-palette, 'primary');
-$global-font-size: 18px;
+$global-font-size: 100%;
 $global-width: 1200px;
 $content-width-max: 674px;
 

@@ -4,8 +4,8 @@
 .wp-block-media-text__content,
 .wp-block-column {
   > [class^="wp-block-"] {
-    @include -zf-breakpoint-value(auto, $block-margins) {
-      $margin: $-zf-bp-value;
+    @include breakpoint-value($block-margins) {
+      $margin: $-bp-value;
 
       margin-top: $margin;
       margin-bottom: $margin;

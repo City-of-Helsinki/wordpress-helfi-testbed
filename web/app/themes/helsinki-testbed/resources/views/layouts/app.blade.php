@@ -1,13 +1,11 @@
 <div class="site">
-  <headroom :tolerance="10" :offset="100" class="site-header">
+  <div class="site-header">
     @php(do_action('get_header'))
     @include('partials.header')
-  </headroom>
+  </div>
 
   <main class="site-content">
-    <div class="grid-container">
-      @yield('content')
-    </div>
+    @yield('content')
   </main>
 
   <footer class="site-footer">

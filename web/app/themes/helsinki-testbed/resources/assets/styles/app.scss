@@ -1,12 +1,13 @@
 /** Libraries */
-@import "~foundation-sites/scss/foundation";
+@import "~normalize.css";
+@import "~sass-mq";
 
 /** Config */
-@import 'config/theme';
 @import 'config/variables';
 @import 'config/external';
 
 /** Common */
+@import 'common/utils';
 @import 'common/fonts';
 @import 'common/foundation';
 @import 'common/frontend';

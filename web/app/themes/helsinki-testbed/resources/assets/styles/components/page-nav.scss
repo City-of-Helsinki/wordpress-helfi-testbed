@@ -1,6 +1,5 @@
 .page-nav {
-  @include pagination-container;
-
+  // @todo
   a {
     display: inline-block;
   }
@@ -9,14 +8,6 @@
 }
 
 .post-page-numbers {
-  margin-right: $pagination-item-spacing;
-  font-size: $pagination-font-size;
-  padding: $pagination-item-padding;
-  border-radius: $pagination-radius;
-  color: $pagination-item-color;
+  // @todo
   text-decoration: none;
-
-  &.current {
-    @include pagination-item-current;
-  }
 }

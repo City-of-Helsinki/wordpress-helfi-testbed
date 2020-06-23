@@ -3,22 +3,22 @@
  */
 
 .wp-block-button {
-  color: $button-color;
+  color: $white;
   border-radius: 0;
-  background-color: $button-background;
+  background-color: $primary-color;
 
   &:hover,
   &:focus {
-    background-color: $button-background-hover;
+    background-color: darken($primary-color, 10%);
   }
 
   &.is-style-outline {
-    color: $button-background;
+    color: $primary-color;
     background-color: transparent;
 
     &:hover,
     &:focus {
-      color: $button-background-hover;
+      color: darken($primary-color, 10%);
       background-color: transparent;
       text-decoration: underline;
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d617f89451d3b95443f5a7b07faac83",
+    "content-hash": "dee7fd170adb5737babf8219fe968742",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1158,6 +1158,49 @@
                 "source": "https://github.com/generoi/gravityforms/tree/v2.4.17.20"
             },
             "time": "2020-04-12T13:45:22+00:00"
+        },
+        {
+            "name": "generoi/polylang-pro",
+            "version": "v2.7.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:generoi/polylang-pro.git",
+                "reference": "476a8f29e210974aa35c7bd56c8471fdeaa53198"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/generoi/polylang-pro/zipball/476a8f29e210974aa35c7bd56c8471fdeaa53198",
+                "reference": "476a8f29e210974aa35c7bd56c8471fdeaa53198",
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    ".gitignore"
+                ]
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Demarle"
+                }
+            ],
+            "description": "Polylang PRO",
+            "homepage": "https://polylang.pro",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/generoi/polylang-pro/issues",
+                "source": "https://github.com/generoi/polylang-pro/tree/v2.7.3"
+            },
+            "time": "2020-06-09T11:20:50+00:00"
         },
         {
             "name": "generoi/robo-genero",
@@ -6229,6 +6272,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/taxonomy-terms-order/"
+        },
+        {
+            "name": "wpackagist-plugin/theme-translation-for-polylang",
+            "version": "3.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/theme-translation-for-polylang/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/theme-translation-for-polylang.zip?timestamp=1585247837"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/theme-translation-for-polylang/"
         },
         {
             "name": "wpackagist-plugin/user-switching",

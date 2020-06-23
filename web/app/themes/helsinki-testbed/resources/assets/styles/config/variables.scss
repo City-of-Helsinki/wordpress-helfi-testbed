@@ -6,56 +6,53 @@
 $is-frontend: true;
 
 $block-paddings: (
-  small: 48px,
-  medium: 72px
+  small: $spacing-2-xl,
+  medium: $spacing-5-xl
 );
 
 $block-margins: (
-  small: 48px,
-  medium: 72px
+  small: $spacing-2-xl,
+  medium: $spacing-5-xl
 );
 
+// @todo we need to fix the grid
 $container-margins: (
   small: 20px,
   medium: 30px
 );
 
 $color-palette: (
-  'primary': #0072c6,
+  'primary': $color-coat-of-arms-blue,
   'secondary': #767676,
-  'black': #000,
-  'white': #fff,
-  'c-kes-kes-light-20': #fff3d2,
-  'c-kupari-kupari-light-20': #ccf7ed,
-  'c-sumu-sumu-light-20': #ebf4fb,
-  'c-suomenlinna-suomenlinna-light-20': #fdecf3,
-  'c-engel-engel-light-20': #fffae3,
-  'light-grey': #f6f6f8,
-  'dark-grey': #1a1a1a,
-  'c-suomenlinna-suomenlinna': #f5a3c7,
-  'c-vaakuna-vaakuna': #0072c6,
-  'c-kupari-kupari': #00d7a7,
-  'c-kes-kes': #ffc61e,
+  'black': $color-black,
+  'white': $color-white,
+  'c-kes-kes-light-20':	$color-summer-light-20,
+  'c-kupari-kupari-light-20': $color-copper-light-20,
+  'c-sumu-sumu-light-20': $color-fog-light-20,
+  'c-suomenlinna-suomenlinna-light-20': $color-suomenlinna-light-20,
+  'c-engel-engel-light-20': $color-engel-light-20,
+  'light-grey': #f6f6f8, // @todo
+  'dark-grey': $color-black-90,
+  'c-suomenlinna-suomenlinna': $color-suomenlinna,
+  'c-vaakuna-vaakuna': $color-coat-of-arms-blue,
+  'c-kupari-kupari': 	$color-copper,
+  'c-kes-kes': $color-summer,
+  'c-black-20': $color-black-20,
 );
 
 $font-sizes: (
-  small: rem-calc(14),
-  normal: rem-calc(16),
-  large: rem-calc(22),
+  small: $fontsize-body-small,
+  default: $fontsize-body-default,
+  medium: $fontsize-body-medium,
+  large: $fontsize-body-large,
 );
 
-$light-grey: map-get($color-palette, 'light-grey');
-$medium-grey: map-get($color-palette, 'light-grey'); // not defined
-$dark-grey: map-get($color-palette, 'dark-grey');
-$black: map-get($color-palette, 'black');
-$white: map-get($color-palette, 'white');
 $font-family: "HelsinkiGrotesk", Georgia, "Times", "Times New Roman", serif;
 $primary-color: map-get($color-palette, 'primary');
 $global-font-size: 18px;
-$global-width: 1440px;
+$global-width: 1200px;
 $global-margin: 1rem;
 $content-width-max: 674px;
-$small-font-size: 80%;
 
 $mq-breakpoints: (
   small: 320px,

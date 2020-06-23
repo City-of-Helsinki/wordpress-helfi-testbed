@@ -39,5 +39,5 @@ p:last-child {
 
 // Dimmed backgrounds are assumed to be dark by default.
 .has-background-dim:not(.has-background) {
-  color: $white;
+  color: $color-white;
 }

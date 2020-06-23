@@ -88,14 +88,14 @@ $content-width-max: 674px !default;
 // @todo blockquote has some extra spacing
 @media (min-width: 640px) {
   .alignleft {
-    margin-right: $global-margin;
-    margin-bottom: $global-margin;
+    margin-right: $spacing-m;
+    margin-bottom: $spacing-m;
     float: left;
   }
 
   .alignright {
-    margin-left: $global-margin;
-    margin-bottom: $global-margin;
+    margin-left: $spacing-m;
+    margin-bottom: $spacing-m;
     float: right;
   }
 }

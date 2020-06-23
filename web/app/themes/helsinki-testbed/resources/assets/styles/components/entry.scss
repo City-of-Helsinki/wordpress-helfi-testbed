@@ -4,17 +4,17 @@
   margin-right: auto;
 
   > :last-child:not(.alignfull) {
-    margin-bottom: $global-margin;
+    margin-bottom: $spacing-m;
   }
 
   > h1:first-child {
-    margin-top: $global-margin;
+    margin-top: $spacing-m;
   }
 }
 
 .entry-title {
   text-align: center;
-  margin-bottom: $global-margin;
+  margin-bottom: $spacing-m;
 
   @extend %alignwide;
 }
@@ -24,9 +24,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: $global-margin;
+  margin-bottom: $spacing-m;
 
   .byline {
-    margin-left: $global-margin;
+    margin-left: $spacing-m;
   }
 }

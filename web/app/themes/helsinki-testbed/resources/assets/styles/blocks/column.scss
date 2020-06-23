@@ -10,6 +10,6 @@
   // On mobile stacked columns need gutters.
   // Note breakpoint is taken from wp core.
   @media (max-width: 782px) {
-    margin-bottom: $global-margin;
+    margin-bottom: $spacing-m;
   }
 }

@@ -21,8 +21,8 @@
 
   // Blocks with backgrounds have a padding.
   &.has-background {
-    @include -zf-breakpoint-value(auto, $block-paddings) {
-      $padding: $-zf-bp-value;
+    @include breakpoint-value($block-paddings) {
+      $padding: $-bp-value;
 
       padding: $padding $padding;
 
@@ -47,7 +47,7 @@
         top: -48px;
         margin-bottom: -48px;
 
-        @include breakpoint(medium up) {
+        @include mq($from: medium) {
           top: -72px;
           margin-bottom: -75px;
         }
@@ -57,7 +57,7 @@
         bottom: -48px;
         margin-top: -48px;
 
-        @include breakpoint(medium up) {
+        @include mq($from: medium) {
           bottom: -72px;
           margin-top: -75px;
         }

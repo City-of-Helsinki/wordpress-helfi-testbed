@@ -68,6 +68,7 @@
     "foundation-sites": "^6.6.1",
     "headroom.js": "^0.10.3",
     "jquery": "^3.4.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "sass-mq": "^5.0.1"
   }
 }

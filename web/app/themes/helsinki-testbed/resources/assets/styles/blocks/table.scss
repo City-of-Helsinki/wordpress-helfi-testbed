@@ -10,8 +10,8 @@
 
   td,
   th {
-    border: $table-border;
-    padding: $table-padding;
+    border: 0;
+    padding: 10px;
   }
 
   @each $name, $color in $colors {
@@ -27,7 +27,7 @@
     }
 
     tbody tr:nth-child(odd) {
-      background-color: $table-striped-background;
+      background-color: $light-grey;
     }
 
     > .has-background {

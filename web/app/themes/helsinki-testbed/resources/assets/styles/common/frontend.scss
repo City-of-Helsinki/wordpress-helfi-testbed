@@ -3,9 +3,19 @@ html {
   min-height: 100%;
   display: flex;
   overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: $global-font-size;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   // flex.
   width: 100%;
   overflow-y: auto;
@@ -13,4 +23,12 @@ body {
   overflow-x: hidden;
   // Improve render performance by disabling some gestures.
   touch-action: manipulation;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
 }

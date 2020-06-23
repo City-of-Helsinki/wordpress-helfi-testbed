@@ -2,8 +2,6 @@
  * Editor
  */
 
-@import "~foundation-sites/scss/foundation";
-@import 'config/theme';
 @import '~sass-mq';
 
 @import 'config/variables';
@@ -16,27 +14,13 @@
 // Disable frontend specific styles.
 $is-frontend: false;
 
-.foundation-mq {
-  font-family: '#{-zf-bp-serialize($breakpoints)}';
-}
-
 .editor-styles-wrapper > * {
-  // Foundation body styling extracted from foundation-global-styles().
-  background: $body-background;
+  font-family: $font-family;
   font-size: $global-font-size;
-  font-family: $body-font-family;
-  font-weight: $global-weight-normal;
-  line-height: $global-lineheight;
-  color: $body-font-color;
-
-  @if ($body-antialiased) {
-    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
-    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
-  }
 
   // Style page title
   .editor-post-title__input {
-    font-family: $header-font-family;
+    font-family: $font-family;
   }
 
   // Disable links rendered in ACF blocks

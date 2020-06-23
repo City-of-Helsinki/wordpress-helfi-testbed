@@ -49,7 +49,7 @@ mix.palette({
   pretty: false,
   sass: {
     path: 'resources/assets/styles/config',
-    files: ['theme.scss'],
+    files: ['variables.scss'],
     variables: ['color-palette'],
   },
 });

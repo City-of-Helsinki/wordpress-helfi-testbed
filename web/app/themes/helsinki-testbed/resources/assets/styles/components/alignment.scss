@@ -43,9 +43,9 @@ $content-width-max: 674px !default;
 %alignwide {
   @include expanded-alignment(
     $sizer: 1.2,
-    $max-width: $grid-container-max,
+    $max-width: $global-width,
     $content-width: $content-width-max,
-    $gutter: map-get($grid-container-padding, small),
+    $gutter: map-get($container-margins, small),
   );
 }
 

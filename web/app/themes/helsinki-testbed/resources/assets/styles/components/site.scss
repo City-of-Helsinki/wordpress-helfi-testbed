@@ -10,7 +10,14 @@
 }
 
 .site-content {
-  //
+  max-width: $global-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint-value($container-margins) {
+    padding-left: $-bp-value;
+    padding-right: $-bp-value;
+  }
 }
 
 .site-footer {

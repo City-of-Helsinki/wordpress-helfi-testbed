@@ -133,14 +133,14 @@ add_action('after_setup_theme', function () {
             'size' => 14,
         ],
         [
-            'name' => __('normal', 'sage'),
-            'slug' => 'normal',
-            'size' => 16,
+            'name' => __('medium', 'sage'),
+            'slug' => 'medium',
+            'size' => 18,
         ],
         [
             'name' => __('large', 'sage'),
             'slug' => 'large',
-            'size' => 22,
+            'size' => 20,
         ],
     ]);
 

@@ -4,7 +4,6 @@ html {
   display: flex;
   overflow-x: hidden;
   box-sizing: border-box;
-  font-size: $global-font-size;
 }
 
 *,
@@ -23,12 +22,4 @@ body {
   overflow-x: hidden;
   // Improve render performance by disabling some gestures.
   touch-action: manipulation;
-}
-
-img {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
 }

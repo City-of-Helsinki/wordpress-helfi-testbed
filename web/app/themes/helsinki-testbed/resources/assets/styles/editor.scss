@@ -10,6 +10,7 @@
 @import 'common/utils';
 @import 'common/fonts';
 @import 'common/icons';
+@import 'common/foundation';
 
 // Disable frontend specific styles.
 $is-frontend: false;
@@ -33,7 +34,6 @@ $is-frontend: false;
     max-width: $content-width-max;
   }
 
-  @import 'common/foundation';
   @import 'common/global';
   @import 'common/typography';
   @import 'components';

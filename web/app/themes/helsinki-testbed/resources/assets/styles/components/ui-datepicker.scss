@@ -48,14 +48,14 @@
       order: 1;
       flex: 0 0 auto;
       margin-right: 0.5rem;
-      background-image: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-left.svg', fill=$medium-gray);
+      background-image: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-left.svg', fill=$medium-gray);
     }
 
     .ui-datepicker-next {
       order: 3;
       flex: 0 0 auto;
       margin-left: 0.5rem;
-      background-image: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg', fill=$medium-gray);
+      background-image: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg', fill=$medium-gray);
     }
 
     .ui-datepicker-title {

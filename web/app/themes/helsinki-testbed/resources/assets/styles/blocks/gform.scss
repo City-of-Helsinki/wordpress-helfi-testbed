@@ -80,7 +80,7 @@
 
   // Add FontAwesome icon to the date field default icon
   .ui-datepicker-trigger {
-    content: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/regular/calendar.svg');
+    content: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/regular/calendar.svg');
     margin-left: 0.5rem;
     margin-top: -0.5rem;
   }

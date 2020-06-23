@@ -3,7 +3,7 @@
     padding-right: $dropdownmenu-arrow-padding;
 
     &::after {
-      content: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-down.svg', fill=$medium-gray);
+      content: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-down.svg', fill=$medium-gray);
       display: block;
       width: 0.6em;
       height: 0.6em;

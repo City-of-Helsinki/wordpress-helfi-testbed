@@ -4,7 +4,7 @@
     justify-content: space-between;
 
     &::after {
-      content: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg', fill=$medium-gray);
+      content: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg', fill=$medium-gray);
       display: block;
       width: 0.6em;
       height: 0.6em;
@@ -16,7 +16,7 @@
     display: flex;
 
     &::before {
-      content: svg-load('../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-left.svg', fill=$medium-gray);
+      content: svg-load('../../node_modules/@fortawesome/fontawesome-free/svgs/solid/chevron-left.svg', fill=$medium-gray);
       display: block;
       width: 0.6em;
       height: 0.6em;

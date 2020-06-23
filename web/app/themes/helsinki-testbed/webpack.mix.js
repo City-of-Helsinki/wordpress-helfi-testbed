@@ -62,7 +62,7 @@ mix.options({
   extractVueStyles: 'styles/vue.css',
   processCssUrls: false,
   postCss: [
-    require('postcss-inline-svg')({paths: [mix.config.publicPath]}),
+    require('postcss-inline-svg')({paths: ['resources/assets']}),
     // @see https://github.com/JeffreyWay/laravel-mix/issues/1606#issuecomment-551457071
     require('autoprefixer')({grid: 'autoplace'}),
   ],

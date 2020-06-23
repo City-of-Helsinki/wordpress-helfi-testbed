@@ -23,7 +23,7 @@ class App extends Composer
     public function with()
     {
         return [
-            'siteName' => $this->siteName(),
+            'site_name' => $this->siteName(),
         ];
     }
 

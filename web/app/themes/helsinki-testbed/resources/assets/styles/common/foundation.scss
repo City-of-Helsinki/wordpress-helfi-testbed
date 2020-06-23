@@ -1,5 +1,7 @@
 body {
   font-size: $global-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button {

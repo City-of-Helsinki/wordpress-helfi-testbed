@@ -1,0 +1,83 @@
+.site-navigation {
+  display: flex;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: $global-width;
+  background-color: $color-white;
+
+  // cover entire viewport behind navigation since it has a max-width
+  &::before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    background-color: $color-white;
+    z-index: -1; // behind menu items
+  }
+
+  &__item {
+    list-style: none;
+    font-weight: bold;
+    color: $color-black;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: $spacing-m;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    line-height: $lineheight-l;
+    display: inline-block;
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
+  }
+
+  &__submenu-trigger {
+    width: $spacing-m;
+    margin-left: $spacing-2-xs;
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
+    cursor: pointer;
+  }
+
+  // submenu position behind main site navigation and scrolled out once opened.
+  &__submenu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-1px);
+    margin: 0 auto;
+    max-width: $global-width;
+    padding-left: 0;
+    transition: transform 200ms ease-out;
+    // behind pseudo background of main navigation so it's hidden until scrolled past the menu
+    z-index: -2;
+
+    .site-navigation__item {
+      font-weight: normal;
+    }
+
+    // cover entire viewport, mostly because we need the border.
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(50% - 50vw);
+      width: 100vw;
+      top: 0;
+      bottom: 0;
+      background-color: $color-white;
+      border-top: solid 1px $color-black-20;
+      z-index: -1;
+    }
+
+    .site-navigation__submenu-trigger[aria-expanded="true"] + & {
+      transform: translateY(100%);
+    }
+  }
+}

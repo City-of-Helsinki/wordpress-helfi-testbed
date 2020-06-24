@@ -11,6 +11,7 @@
 - Configure staging/production environments
 - Added typography styles.
 - Added Icon & Text block.
+- Added support for Banner block as a customized Columns block.
 - Updated spacing around and inside blocks.
 
 ## 0.1.0

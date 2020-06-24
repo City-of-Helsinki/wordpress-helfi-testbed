@@ -1,7 +1,22 @@
 .entry-content {
-  max-width: $content-width-max;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  > * {
+    max-width: $content-width-max;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  > .alignwide {
+    max-width: 1200px;
+  }
+
+  > .alignfull {
+    max-width: none;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
 
   > :last-child:not(.alignfull) {
     margin-bottom: $spacing-m;
@@ -15,8 +30,6 @@
 .entry-title {
   text-align: center;
   margin-bottom: $spacing-m;
-
-  @extend %alignwide;
 }
 
 .entry-meta {

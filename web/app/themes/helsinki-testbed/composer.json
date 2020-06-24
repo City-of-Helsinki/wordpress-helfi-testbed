@@ -43,9 +43,11 @@
   ],
   "require": {
     "php": "^7.2.5",
+    "doctrine/inflector": "^1.4",
     "generoi/sage-demo-content": "dev-master",
     "generoi/sage-nativeblock": "dev-master",
     "generoi/sage-woocommerce": "dev-master",
+    "log1x/acf-composer": "^1.3",
     "log1x/navi": "^1.0",
     "roots/acorn": "^1.0.1"
   },

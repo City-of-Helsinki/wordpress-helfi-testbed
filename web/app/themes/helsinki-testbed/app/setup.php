@@ -7,6 +7,7 @@
 namespace App;
 
 use function Roots\asset;
+use function Roots\base_path;
 
 /**
  * Register the theme assets.
@@ -124,7 +125,10 @@ add_action('after_setup_theme', function () {
      * Enable theme color palette support
      * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes
      */
-    add_theme_support('editor-color-palette', json_decode(asset('palette.json')->contents(), true));
+    add_theme_support('editor-color-palette', json_decode(
+        file_get_contents(base_path('resources/assets/palette.json')),
+        true
+    ));
 
     add_theme_support('editor-font-sizes', [
         [

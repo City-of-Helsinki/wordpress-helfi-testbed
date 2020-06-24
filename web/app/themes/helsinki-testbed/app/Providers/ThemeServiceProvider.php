@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Roots\Acorn\ServiceProvider;
 
+use function Roots\view;
+
 class ThemeServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +25,12 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        add_filter('searchwp_live_search_results_template', [$this, 'searchwpResultsTemplate']);
+    }
+
+    public function searchwpResultsTemplate($template)
+    {
+        $view = 'vendor.searchwp-live-ajax-search.search-results';
+        return view()->exists($view) ? view($view)->makeLoader() : $template;
     }
 }

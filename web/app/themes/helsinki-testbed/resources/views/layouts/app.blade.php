@@ -1,8 +1,8 @@
 <div class="site">
-  <div class="site__header">
+  <header class="site__header" id="header">
     @php(do_action('get_header'))
     @include('partials.header')
-  </div>
+  </header>
 
   <main class="site__content">
     @yield('content')

@@ -6,7 +6,18 @@
 }
 
 .site__header {
-  //
+  background-color: $color-white;
+  z-index: 100;
+
+  &.is-active {
+    height: var(--app-height, 100vh);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+  }
 }
 
 .site__content {
@@ -19,8 +30,4 @@
     padding-left: $-bp-value;
     padding-right: $-bp-value;
   }
-}
-
-.site__footer {
-  //
 }

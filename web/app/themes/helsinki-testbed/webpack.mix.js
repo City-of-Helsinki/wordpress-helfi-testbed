@@ -41,6 +41,7 @@ mix.options({
   processCssUrls: false,
   postCss: [
     require('postcss-inline-svg')({paths: ['resources/assets']}),
+    require('postcss-css-variables')({preserve: true, preserveAtRulesOrder: true}),
     // @see https://github.com/JeffreyWay/laravel-mix/issues/1606#issuecomment-551457071
     require('autoprefixer')({grid: 'autoplace'}),
   ],

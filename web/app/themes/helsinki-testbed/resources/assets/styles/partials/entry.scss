@@ -1,22 +1,20 @@
 .entry-content {
   font-size: $fontsize-body-medium;
-  padding-left: 10px;
-  padding-right: 10px;
 
   > * {
-    max-width: $content-width-max;
+    max-width: var(--content-width, #{$content-width-max});
     margin-left: auto;
     margin-right: auto;
   }
 
-  > .alignwide {
-    max-width: 1200px;
+  .alignwide {
+    max-width: var(--alignwide-width);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   > .alignfull {
     max-width: none;
-    width: calc(100% + 20px);
-    margin-left: -10px;
   }
 
   > :last-child:not(.alignfull) {

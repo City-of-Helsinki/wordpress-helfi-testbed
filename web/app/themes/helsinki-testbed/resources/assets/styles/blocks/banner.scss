@@ -2,10 +2,10 @@
 // Columns block, rather than a standalone block. Since it's a hacky solution,
 // there are a lot of `!important` definitions.
 .banner-block {
-  padding: 68px 56px !important;
+  padding: 68px 56px 68px 0 !important;
 
   @include mq($until: large) {
-    padding: 48px 16px !important;
+    padding: 48px 16px 48px 0 !important;
   }
 
   .wp-block-columns {

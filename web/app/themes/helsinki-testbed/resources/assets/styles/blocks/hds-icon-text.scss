@@ -27,9 +27,12 @@
     line-height: 1.21;
   }
 
-  .wp-block-hds-icon-text__icon + .wp-block-hds-icon-text__heading,
-  .wp-block-hds-icon-text__icon + .wp-block-hds-icon-text__body {
+  .wp-block-hds-icon-text__icon + .wp-block-hds-icon-text__heading {
     margin-top: 26px;
+  }
+
+  .wp-block-hds-icon-text__icon + .wp-block-hds-icon-text__body {
+    margin-top: 30px;
   }
 
   .wp-block-hds-icon-text__heading + .wp-block-hds-icon-text__body {

@@ -37,11 +37,19 @@ $is-frontend: false;
 }
 
 .editor-styles-wrapper > * {
+  font-size: $fontsize-body-medium;
   font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
 
   // Style page title
-  .editor-post-title__input {
+  .edit-post-visual-editor__post-title-wrapper {
     font-family: inherit;
+    max-width: var(--alignwide-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    .wp-block {
+      margin-left: 0;
+    }
   }
 
   // Disable links rendered in ACF blocks

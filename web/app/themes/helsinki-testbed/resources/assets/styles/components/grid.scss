@@ -31,16 +31,6 @@
   @include ie11 {
     margin: $spacing-m / 2;
   }
-
-  &--auto {
-    width: auto;
-    flex: 1 1 0;
-  }
-
-  &--shrink {
-    width: auto;
-    flex: 0 0 auto;
-  }
 }
 
 @each $name, $breakpoint in $mq-breakpoints {
@@ -52,6 +42,18 @@
           var(--grid-gutter-x)
         );
       }
+    }
+  }
+
+  @include mq($from: $name) {
+    .#{$name}\:auto {
+      width: auto;
+      flex: 1 1 0;
+    }
+
+    .#{$name}\:shrink {
+      width: auto;
+      flex: 0 0 auto;
     }
   }
 }

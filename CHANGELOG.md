@@ -12,7 +12,9 @@
 - Added typography styles.
 - Added Icon & Text block.
 - Added Content List block.
+- Added Person List block.
 - Added support for Banner block as a customized Columns block.
+- Added Person post type.
 - Updated spacing around and inside blocks.
 - Removed old Foundation Sites, purgecss, Fontawesome and Vue
 - Added HDS Design Tokens package

@@ -54,7 +54,7 @@ class PostTypes
         $this->postTypes[] = $this->registerPost();
         $this->postTypes[] = $this->registerPage();
         // $this->postTypes[] = $this->registerProduct();
-        // $this->postTypes[] = $this->registerPerson();
+        $this->postTypes[] = $this->registerPerson();
     }
 
     public function registerPost()
@@ -104,7 +104,6 @@ class PostTypes
             'supports' => ['title', 'thumbnail'],
         ]);
         $person->icon('dashicons-admin-users');
-        $person->taxonomy('department');
         $person->columns()
             ->add(['thumbnail' => ''])
             ->order(['thumbnail' => 1])
@@ -112,9 +111,6 @@ class PostTypes
                 echo get_the_post_thumbnail($post_id, 'thumbnail');
             });
         $person->register();
-
-        $department = new Taxonomy('department');
-        $department->register();
 
         return $person;
     }

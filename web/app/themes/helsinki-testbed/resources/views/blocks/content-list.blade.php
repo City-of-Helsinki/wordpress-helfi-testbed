@@ -2,7 +2,7 @@
   @if($title)
     <h2>{{$title}}</h2>
   @endif
-  <!-- TODO: Use new grid -->
+
   <div class="grid">
     @while ($query->have_posts()) @php($query->the_post())
     <div class="cell xsmall:4 small:2 medium:4">

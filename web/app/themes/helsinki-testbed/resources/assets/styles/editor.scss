@@ -17,6 +17,25 @@
 // Disable frontend specific styles.
 $is-frontend: false;
 
+.wp-block {
+  // Set our own default content width
+  max-width: var(--content-width);
+
+  // Set our own alignwide size
+  &.alignwide,
+  &[data-align=wide] {
+    max-width: var(--alignwide-width);
+  }
+}
+
+@include mq($from: large) {
+  // Remove gutter to make widths match exactly
+  .editor-styles-wrapper.editor-styles-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .editor-styles-wrapper > * {
   font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
 
@@ -28,11 +47,6 @@ $is-frontend: false;
   // Disable links rendered in ACF blocks
   .acf-block-preview a[href]:not([href^="#"]) {
     pointer-events: none;
-  }
-
-  // Use the same width as the page does so that floated blocks appear the same
-  .wp-block:not(.alignfull):not(.alignwide):not([data-align="full"]):not([data-align="wide"]) {
-    max-width: $content-width-max;
   }
 
   @import 'common/global';

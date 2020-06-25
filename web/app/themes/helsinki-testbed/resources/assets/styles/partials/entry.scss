@@ -43,6 +43,11 @@
   margin-bottom: $spacing-m;
 }
 
+.entry-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .entry-meta {
   text-align: center;
   display: flex;

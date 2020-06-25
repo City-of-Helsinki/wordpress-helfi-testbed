@@ -27,6 +27,7 @@
 - Changed alignwide/alignfull hacks in favor of no content container
 - Update Gutenberg to 8.4.0 and cleanup earlier hacks
 - Added archive page styling
+- Added search page.
 
 ## 0.1.0
 

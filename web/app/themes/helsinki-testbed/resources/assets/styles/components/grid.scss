@@ -1,0 +1,54 @@
+.grid {
+  --grid-gutter-x: var(--grid-gutter);
+  --grid-gutter-y: var(--grid-gutter);
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:
+    calc(var(--grid-gutter-y) / 2 * -1)
+    calc(var(--grid-gutter-x) / 2 * -1);
+
+  // IE11 defaults to desktop
+  @include ie11 {
+    margin: -$spacing-m / 2;
+  }
+}
+
+.cell {
+  flex: 0 0 auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  margin:
+    calc(var(--grid-gutter-y) / 2)
+    calc(var(--grid-gutter-x) / 2);
+
+  // IE11 defaults to desktop
+  @include ie11 {
+    margin: $spacing-m / 2;
+  }
+
+  &--auto {
+    width: auto;
+    flex: 1 1 0;
+  }
+
+  &--shrink {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
+
+@for $i from 1 through 12 {
+  .cell--#{$i} {
+    width: calc(
+      (#{$i} / var(--grid-columns) * 100%) -
+      var(--grid-gutter-x)
+    );
+
+    // IE11 defaults to desktop
+    @include ie11 {
+      width: calc(#{$i} / 12 * 100% - #{$spacing-m});
+    }
+  }
+}

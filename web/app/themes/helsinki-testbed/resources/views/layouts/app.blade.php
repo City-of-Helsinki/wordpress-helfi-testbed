@@ -1,14 +1,14 @@
 <div class="site">
-  <div class="site-header">
+  <header class="site__header" id="header">
     @php(do_action('get_header'))
     @include('partials.header')
-  </div>
+  </header>
 
-  <main class="site-content">
+  <main class="site__content">
     @yield('content')
   </main>
 
-  <footer class="site-footer">
+  <footer class="site__footer">
     @include('partials.footer')
   </footer>
 </div>

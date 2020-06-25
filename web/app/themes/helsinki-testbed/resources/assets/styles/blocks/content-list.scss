@@ -3,14 +3,4 @@
     margin-top: 0;
     margin-bottom: $spacing-layout-m;
   }
-
-  // @todo Remove this, just a quick hack for development until grid is done.
-  .grid-x {
-    display: flex;
-
-    > .cell {
-      flex: 1 0 0;
-      margin: 0 10px;
-    }
-  }
 }

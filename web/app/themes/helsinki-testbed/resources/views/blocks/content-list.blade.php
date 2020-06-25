@@ -3,9 +3,9 @@
     <h2>{{$title}}</h2>
   @endif
   <!-- TODO: Use new grid -->
-  <div class="grid-x grid-margin-x grid-margin-y medium-up-2 large-up-3">
+  <div class="grid">
     @while ($query->have_posts()) @php($query->the_post())
-    <div class="cell">
+    <div class="cell cell--4">
       @includeFirst(['teasers.' . get_post_type(), 'teasers.teaser'], ['post' => get_post()])
     </div>
     @endwhile

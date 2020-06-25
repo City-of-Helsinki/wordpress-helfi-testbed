@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dee7fd170adb5737babf8219fe968742",
+    "content-hash": "5fac881efdbf7243a9bfe93bc6dded57",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -6202,6 +6202,24 @@
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
+            "name": "wpackagist-plugin/relevanssi",
+            "version": "4.7.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/relevanssi/",
+                "reference": "tags/4.7.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/relevanssi.4.7.2.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/relevanssi/"
+        },
+        {
             "name": "wpackagist-plugin/safe-svg",
             "version": "1.9.9",
             "source": {
@@ -6218,6 +6236,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
+            "name": "wpackagist-plugin/searchwp-live-ajax-search",
+            "version": "1.4.6.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/searchwp-live-ajax-search/",
+                "reference": "tags/1.4.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/searchwp-live-ajax-search.1.4.6.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/searchwp-live-ajax-search/"
         },
         {
             "name": "wpackagist-plugin/show-environment-in-admin-bar",

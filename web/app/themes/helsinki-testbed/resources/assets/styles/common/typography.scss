@@ -49,4 +49,10 @@ blockquote {
 p {
   margin-block-start: 0;
   margin-block-end: $spacing-m;
+  font-size: $fontsize-body-medium;
+}
+
+a {
+  color: $color-coat-of-arms-blue;
+  // @todo what's the hover state?
 }

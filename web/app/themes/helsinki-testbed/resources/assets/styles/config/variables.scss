@@ -50,9 +50,9 @@ $global-width: 1200px;
 $content-width-max: 674px;
 
 $mq-breakpoints: (
-  small: 320px,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
+  xsmall: $breakpoint-xs,
+  small: $breakpoint-s,
+  medium: $breakpoint-m,
+  large: $breakpoint-l,
+  xlarge: $breakpoint-xl,
 );

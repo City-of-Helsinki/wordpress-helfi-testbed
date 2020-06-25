@@ -2,10 +2,12 @@
 @import "~normalize.css";
 @import "~sass-mq";
 @import "~hds-design-tokens/lib/all";
+@import "~sass-burger/burger";
 
 /** Config */
 @import 'config/variables';
 @import 'config/external';
+@import 'config/container';
 
 /** Common */
 @import 'common/utils';
@@ -23,4 +25,4 @@
 @import 'blocks';
 
 /** Partials */
-@import 'partials/header';
+@import 'partials';

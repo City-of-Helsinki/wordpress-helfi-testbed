@@ -1,7 +1,7 @@
 @if ($primary_navigation)
-  <ul class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">
+  <ul class="site-navigation" role="menubar">
     @foreach ($primary_navigation as $item)
-      @include('partials.menu-item', ['item' => $item])
+      @include('partials.menu-item', ['item' => $item, 'name' => 'site-navigation'])
     @endforeach
   </ul>
 @endif

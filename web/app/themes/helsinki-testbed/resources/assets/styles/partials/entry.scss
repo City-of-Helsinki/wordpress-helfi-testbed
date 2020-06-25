@@ -1,0 +1,53 @@
+.entry-content {
+  font-size: $fontsize-body-medium;
+
+  > * {
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include ie11 {
+      max-width: $content-width-max;
+    }
+  }
+
+  .alignwide {
+    max-width: var(--alignwide-width);
+
+    @include ie11 {
+      max-width: 90%;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  > .alignfull {
+    max-width: none;
+  }
+
+  > :last-child:not(.alignfull) {
+    margin-bottom: $spacing-m;
+  }
+
+  > h1:first-child {
+    margin-top: $spacing-m;
+  }
+}
+
+.entry-title {
+  text-align: center;
+  margin-bottom: $spacing-m;
+}
+
+.entry-meta {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-m;
+
+  .byline {
+    margin-left: $spacing-m;
+  }
+}

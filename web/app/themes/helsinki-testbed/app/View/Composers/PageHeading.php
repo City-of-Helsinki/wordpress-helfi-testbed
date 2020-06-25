@@ -5,10 +5,8 @@ namespace App\View\Composers;
 use App\View\Composers\Concerns\HasPostData;
 use Roots\Acorn\View\Composer;
 
-class Post extends Composer
+class PageHeading extends Composer
 {
-    use HasPostData;
-
     /**
      * List of views served by this composer.
      *
@@ -26,12 +24,9 @@ class Post extends Composer
      *
      * @return array
      */
-    public function override()
+    public function with()
     {
         return [
-            'title' => $this->title(),
-            'post' => $this->post(),
-            'content' => $this->content(),
             'printPageHeading' => $this->printPageHeading(),
         ];
     }

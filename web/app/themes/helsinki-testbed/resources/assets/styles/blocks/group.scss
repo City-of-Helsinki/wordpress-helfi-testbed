@@ -22,8 +22,13 @@
     .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.has-text-align-center) {
       max-width: $content-width-max;
       max-width: var(--content-width);
-      margin-left: 0;
+      margin-left: auto;
       margin-right: auto;
+
+      // align content to the left on large screens
+      @include mq($from: large) {
+        margin-left: 0;
+      }
     }
   }
 

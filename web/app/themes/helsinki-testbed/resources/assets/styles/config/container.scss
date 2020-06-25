@@ -1,9 +1,10 @@
 :root {
   --container-width: #{$container-width-xs};
-  --content-width: calc(var(--container-width) * 1px);
+  --content-width: calc(100% - var(--grid-gutter));
   --grid-gutter: 12px;
   --grid-columns: 4;
   --alignwide-width: 100%;
+  --contentwide-width: calc(100% - var(--grid-gutter));
 
   @include mq($from: small, $until: medium) {
     --container-width: #{$container-width-s};
@@ -23,6 +24,7 @@
     --grid-columns: 12;
     --content-width: calc(var(--container-width) / var(--grid-columns) * 8px);
     --alignwide-width: calc(var(--container-width) * 1px);
+    --contentwide-width: var(--alignwide-width);
   }
 
   @include mq($from: xlarge) {
@@ -31,5 +33,6 @@
     --grid-columns: 12;
     --content-width: calc(var(--container-width) / var(--grid-columns) * 8px);
     --alignwide-width: calc(var(--container-width) * 1px);
+    --contentwide-width: var(--alignwide-width);
   }
 }

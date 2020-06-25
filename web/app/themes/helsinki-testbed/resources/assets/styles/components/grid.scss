@@ -4,9 +4,12 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin:
-    calc(var(--grid-gutter-y) / 2 * -1)
-    calc(var(--grid-gutter-x) / 2 * -1);
+
+  @include mq($from: large) {
+    margin:
+      calc(var(--grid-gutter-y) / 2 * -1)
+      calc(var(--grid-gutter-x) / 2 * -1);
+  }
 
   // IE11 defaults to desktop
   @include ie11 {

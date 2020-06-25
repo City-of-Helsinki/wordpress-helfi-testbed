@@ -53,3 +53,16 @@
     }
   }
 }
+
+@for $i from 1 through 12 {
+  @each $name, $breakpoint in $mq-breakpoints {
+    @include mq($from: $name) {
+      .#{$name}\:cell--#{$i} {
+        width: calc(
+          (#{$i} / var(--grid-columns) * 100%) -
+          var(--grid-gutter-x)
+        );
+      }
+    }
+  }
+}

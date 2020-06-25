@@ -29,7 +29,7 @@
     }
   }
 
-  &__thumbnail + &__content {
+  &__thumbnail + .teaser__content {
     margin-top: $spacing-layout-xs;
   }
 
@@ -45,7 +45,7 @@
     margin: 0;
   }
 
-  &__title + &__excerpt {
+  &__title + .teaser__excerpt {
     margin-top: $spacing-layout-2-xs;
   }
 
@@ -65,7 +65,7 @@
     }
   }
 
-  &__content + &__tags {
+  &__content + .teaser__tags {
     margin-top: $spacing-2-xs;
   }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fac881efdbf7243a9bfe93bc6dded57",
+    "content-hash": "9212b6687b300594c4b754931b77d4f8",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -6041,15 +6041,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "7.9.1",
+            "version": "8.4.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/7.9.1"
+                "reference": "tags/8.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.7.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.8.4.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

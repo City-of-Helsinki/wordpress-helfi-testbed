@@ -14,6 +14,14 @@
 - Added Content List block.
 - Added support for Banner block as a customized Columns block.
 - Updated spacing around and inside blocks.
+- Added HDS Design Tokens package
+- Added site navigation
+- Added language menu
+- Added search field
+- Added a grid utility
+- Changed base font size to 16px and set post content font size 18px
+- Changed HDS breakpoints and content width adjustments
+- Changed alignwide/alignfull hacks in favor of no content container
 
 ## 0.1.0
 

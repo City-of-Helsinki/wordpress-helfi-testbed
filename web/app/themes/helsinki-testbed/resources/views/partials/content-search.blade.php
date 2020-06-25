@@ -1,5 +1,5 @@
 <article @php(post_class())>
-  <header>
+  <header class="entry-header">
     <h2 class="entry-title">
       <a href="{{ get_permalink() }}">
         @php(the_title())

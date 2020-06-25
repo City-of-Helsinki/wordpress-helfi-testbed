@@ -35,8 +35,11 @@
   }
 }
 
-.entry-title {
-  text-align: center;
+.entry-header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--contentwide-width);
+  margin-top: $spacing-m;
   margin-bottom: $spacing-m;
 }
 

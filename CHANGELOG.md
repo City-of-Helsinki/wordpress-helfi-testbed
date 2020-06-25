@@ -25,6 +25,7 @@
 - Changed base font size to 16px and set post content font size 18px
 - Changed HDS breakpoints and content width adjustments
 - Changed alignwide/alignfull hacks in favor of no content container
+- Update Gutenberg to 8.4.0 and cleanup earlier hacks
 
 ## 0.1.0
 

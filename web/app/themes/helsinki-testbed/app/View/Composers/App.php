@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'site_name' => $this->siteName(),
+            'title' => $this->title(),
         ];
     }
 
@@ -35,5 +36,34 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function title(): string
+    {
+        if (is_home()) {
+            if ($home = get_option('page_for_posts', true)) {
+                return get_the_title($home);
+            }
+
+            return __('Latest Posts', 'sage');
+        }
+
+        if (is_archive()) {
+            return get_the_archive_title();
+        }
+
+        if (is_search()) {
+            return sprintf(
+                __('Search results (%s)', 'helsinki-testbed'),
+                $GLOBALS['wp_query']->found_posts
+            );
+        }
+
+        if (is_404()) {
+            return __('Not Found', 'sage');
+        }
+
+        return get_the_title();
+
     }
 }

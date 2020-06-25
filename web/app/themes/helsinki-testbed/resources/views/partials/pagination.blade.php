@@ -2,7 +2,6 @@
   $query = $query ?? $GLOBALS['wp_query'];
 @endphp
 @if (isset($query) && $query->max_num_pages > 1)
-  <!-- @todo Fix the icons or remove pagination -->
   <div class="pagination">
     {!! paginate_links([
       'base' => str_replace(999999, '%#%', esc_url(get_pagenum_link(999999))),

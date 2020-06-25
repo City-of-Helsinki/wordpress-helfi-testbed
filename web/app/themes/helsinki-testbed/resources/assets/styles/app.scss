@@ -7,6 +7,7 @@
 /** Config */
 @import 'config/variables';
 @import 'config/external';
+@import 'config/container';
 
 /** Common */
 @import 'common/utils';
@@ -16,7 +17,6 @@
 @import 'common/global';
 @import 'common/icons';
 @import 'common/typography';
-@import 'common/container';
 
 /** Components */
 @import 'components';

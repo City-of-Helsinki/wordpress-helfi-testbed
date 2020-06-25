@@ -7,12 +7,12 @@
 
 @import 'config/variables';
 @import 'config/external';
+@import 'config/container';
 
 @import 'common/utils';
 @import 'common/fonts';
 @import 'common/icons';
 @import 'common/foundation';
-@import 'common/container';
 
 // Disable frontend specific styles.
 $is-frontend: false;

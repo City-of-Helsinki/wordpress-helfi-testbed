@@ -41,6 +41,19 @@ $fonts-dir: '../fonts';
   text-rendering: optimizeLegibility;
 }
 
+/* Webfont: HelsinkiGrotesk-Medium */
+@font-face {
+  font-family: 'HelsinkiGrotesk';
+  src: url('#{$fonts-dir}/HelsinkiGrotesk-Medium.eot'); /* IE9 Compat Modes */
+  src: url('#{$fonts-dir}/HelsinkiGrotesk-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$fonts-dir}/HelsinkiGrotesk-Medium.woff') format('woff'), /* Modern Browsers */
+    url('#{$fonts-dir}/HelsinkiGrotesk-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('#{$fonts-dir}/HelsinkiGrotesk-Medium.svg#HelsinkiGrotesk-Regular') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
 /* Webfont: HelsinkiGrotesk-BoldItalic */
 @font-face {
   font-family: 'HelsinkiGrotesk';

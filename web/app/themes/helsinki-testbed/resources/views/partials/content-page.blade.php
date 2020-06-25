@@ -1,10 +1,6 @@
 <article @php(post_class())>
   @if ($printPageHeading)
-    <header class="entry-header">
-      <h1 class="entry-title">
-        @php(the_title())
-      </h1>
-    </header>
+    @include('partials.page-header')
   @endif
 
   <div class="entry-content">

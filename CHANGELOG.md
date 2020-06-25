@@ -26,6 +26,7 @@
 - Changed HDS breakpoints and content width adjustments
 - Changed alignwide/alignfull hacks in favor of no content container
 - Update Gutenberg to 8.4.0 and cleanup earlier hacks
+- Added archive page styling
 
 ## 0.1.0
 

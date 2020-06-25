@@ -6,18 +6,31 @@
   @else
     @include('partials.page-header')
 
-    @if (!have_posts())
-      <x-alert type="warning">
-        {!! __('Sorry, no results were found.', 'sage') !!}
-      </x-alert>
+    <div class="entry-content">
 
-      {!! get_search_form(false) !!}
-    @endif
+      <x-group align="wide">
+        @php(the_archive_description())
 
-    @while(have_posts()) @php(the_post())
-      @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-    @endwhile
+        @if (!have_posts())
+          <x-alert type="warning">
+            {!! __('Sorry, no results were found.', 'sage') !!}
+          </x-alert>
+        @endif
+      </x-group>
 
-    {!! get_the_posts_navigation() !!}
+      <x-group align="wide" id="listing">
+        <div class="alignwide">
+          <div class="grid">
+            @while(have_posts()) @php(the_post())
+              <div class="cell xsmall:4 small:2 medium:4">
+                @includeFirst(['teasers.' . get_post_type(), 'teasers.teaser'], ['post' => get_post()])
+              </div>
+            @endwhile
+          </div>
+        </div>
+      </x-group>
+
+      @include('partials.pagination', ['fragment' => 'listing'])
+    </div>
   @endif
 @endsection

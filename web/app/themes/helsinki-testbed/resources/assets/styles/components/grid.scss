@@ -54,8 +54,8 @@
   }
 }
 
-@for $i from 1 through 12 {
-  @each $name, $breakpoint in $mq-breakpoints {
+@each $name, $breakpoint in $mq-breakpoints {
+  @for $i from 1 through 12 {
     @include mq($from: $name) {
       .#{$name}\:cell--#{$i} {
         width: calc(

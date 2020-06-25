@@ -5,7 +5,7 @@
   <!-- TODO: Use new grid -->
   <div class="grid">
     @while ($query->have_posts()) @php($query->the_post())
-    <div class="cell cell--4">
+    <div class="cell xsmall:4 small:2 medium:4">
       @includeFirst(['teasers.' . get_post_type(), 'teasers.teaser'], ['post' => get_post()])
     </div>
     @endwhile

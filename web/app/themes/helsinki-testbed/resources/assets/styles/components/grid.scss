@@ -22,6 +22,7 @@
   margin:
     calc(var(--grid-gutter-y) / 2)
     calc(var(--grid-gutter-x) / 2);
+  max-width: calc(100% - var(--grid-gutter-x));
 
   // IE11 defaults to desktop
   @include ie11 {
@@ -39,16 +40,15 @@
   }
 }
 
-@for $i from 1 through 12 {
-  .cell--#{$i} {
-    width: calc(
-      (#{$i} / var(--grid-columns) * 100%) -
-      var(--grid-gutter-x)
-    );
-
-    // IE11 defaults to desktop
-    @include ie11 {
-      width: calc(#{$i} / 12 * 100% - #{$spacing-m});
+@each $name, $breakpoint in $mq-breakpoints {
+  @for $i from 1 through 12 {
+    @include mq($from: $name) {
+      .#{$name}\:#{$i} {
+        width: calc(
+          (#{$i} / var(--grid-columns) * 100%) -
+          var(--grid-gutter-x)
+        );
+      }
     }
   }
 }

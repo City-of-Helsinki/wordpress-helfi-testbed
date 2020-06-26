@@ -2,19 +2,23 @@
 // Columns block, rather than a standalone block. Since it's a hacky solution,
 // there are a lot of `!important` definitions.
 .banner-block {
-  padding: 68px 56px 68px 0 !important;
+  // On mobile, apply padding all around
+  padding: 48px 16px;
 
-  @include mq($until: large) {
-    padding: 48px 16px 48px 0 !important;
+  // Remove margins between columns. We make our own margins.
+  .wp-block-column {
+    margin-left: 0 !important;
+  }
+
+  // When switching to column layout, omit left padding since the icon column
+  // includes it.
+  @include mq($from: large) {
+    padding: 68px 56px 68px 0 !important;
   }
 
   .wp-block-columns {
     @include mq($from: large) {
       flex-wrap: nowrap !important;
-
-      .wp-block-column {
-        margin-left: 0 !important;
-      }
     }
     @include mq($until: large) {
       flex-wrap: wrap !important;

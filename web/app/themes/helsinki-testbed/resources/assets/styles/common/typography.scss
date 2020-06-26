@@ -58,6 +58,15 @@ p {
   margin-block-start: 0;
   margin-block-end: $spacing-m;
   font-size: $fontsize-body-medium;
+
+  &.description {
+    // Does not correspond to any HDS size.
+    font-size: 22px;
+
+    font-weight: bold;
+    color: $color-black-90;
+    margin-bottom: $spacing-layout-m;
+  }
 }
 
 a {

@@ -41,6 +41,14 @@
   max-width: var(--contentwide-width);
   margin-top: $spacing-m;
   margin-bottom: $spacing-m;
+
+  .post.type-post & {
+    max-width: var(--content-width);
+  }
+}
+
+.entry-title {
+  margin-bottom: $spacing-l;
 }
 
 .entry-title a {
@@ -49,11 +57,11 @@
 }
 
 .entry-meta {
-  text-align: center;
+  text-align: left;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: $spacing-m;
+  justify-content: flex-start;
+  margin-bottom: $spacing-5-xl;
 
   .byline {
     margin-left: $spacing-m;

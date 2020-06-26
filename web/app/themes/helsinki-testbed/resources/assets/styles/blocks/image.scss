@@ -3,4 +3,7 @@
     font-size: $fontsize-body-small;
     text-align: center;
   }
+  &--featured {
+    margin-bottom: $spacing-layout-m !important;
+  }
 }

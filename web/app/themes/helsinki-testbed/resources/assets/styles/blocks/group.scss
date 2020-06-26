@@ -90,52 +90,72 @@
   &[class*='is-style-koro-'] {
     position: relative;
 
+    // By default make more space so that spacing between blocks is preserved
+    // despite the effect. The cover-adjacent class may override this.
+
+    &.is-style-koro-top-basic {
+      margin-top: $basicKoroHeight;
+    }
+
+    &.is-style-koro-top-pulse {
+      margin-top: $pulseKoroHeight;
+    }
+
+    &.is-style-koro-bottom-basic {
+      margin-bottom: $basicKoroHeight;
+    }
+
+    &.is-style-koro-bottom-pulse {
+      margin-bottom: $pulseKoroHeight;
+    }
+
+    @include breakpoint-value($block-margins) {
+      $margin: $-bp-value;
+
+      &.is-style-koro-top-basic {
+        margin-top: calc(#{$margin} + #{$basicKoroHeight});
+      }
+
+      &.is-style-koro-top-pulse {
+        margin-top: calc(#{$margin} + #{$pulseKoroHeight});
+      }
+
+      &.is-style-koro-bottom-basic {
+        margin-bottom: calc(#{$margin} + #{$basicKoroHeight});
+      }
+
+      &.is-style-koro-bottom-pulse {
+        margin-bottom: calc(#{$margin} + #{$pulseKoroHeight});
+      }
+    }
+
     // On the frontend if an optional class is added, move the block so that the
     // effect is on top of an adjacent block. This is not done in the editor in
     // order not to obstruct any controls.
     &.cover-adjacent {
       @if $is-frontend {
         &[class*='is-style-koro-top-'] {
-          top: -48px;
-          margin-bottom: -48px;
+          // Currently not enabled on mobile
+          // top: -48px;
+          // margin-bottom: -48px;
 
-          @include mq($from: medium) {
+          @include mq($from: small) {
             top: -72px;
             margin-bottom: -75px;
+            margin-top: 0;
           }
         }
 
         &[class*='is-style-koro-bottom-'] {
-          bottom: -48px;
-          margin-top: -48px;
+          // Currently not enabled on mobile
+          // bottom: -48px;
+          // margin-top: -48px;
 
-          @include mq($from: medium) {
+          @include mq($from: small) {
             bottom: -72px;
             margin-top: -75px;
+            margin-bottom: 0;
           }
-        }
-      }
-    }
-    // If the cover-adjacent class is not added, instead make more space so that
-    // spacing between blocks is preserved despite the effect.
-    &:not(.cover-adjacent) {
-      @include breakpoint-value($block-margins) {
-        $margin: $-bp-value;
-
-        &.is-style-koro-top-basic {
-          margin-top: calc(#{$margin} + #{$basicKoroHeight});
-        }
-
-        &.is-style-koro-top-pulse {
-          margin-top: calc(#{$margin} + #{$pulseKoroHeight});
-        }
-
-        &.is-style-koro-bottom-basic {
-          margin-bottom: calc(#{$margin} + #{$basicKoroHeight});
-        }
-
-        &.is-style-koro-bottom-pulse {
-          margin-bottom: calc(#{$margin} + #{$pulseKoroHeight});
         }
       }
     }

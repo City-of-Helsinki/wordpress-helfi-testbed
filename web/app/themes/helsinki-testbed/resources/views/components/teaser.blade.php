@@ -27,14 +27,21 @@
         <p class="teaser__excerpt" id="teaser-{{ $id }}-excerpt">{!! $excerpt !!}</p>
       @endif
     </div>
-    @if ($tags)
-      <ul class="teaser__tags">
+    @if ($tags || $categories)
+    <ul class="teaser__tags">
+      @foreach ($categories as $category)
+      <li>
+          <a href={!! get_category_link($category) !!}>{!! $category->name !!}</a>
+      </li>
+      @endforeach
+      @if ($tags)
         @foreach ($tags as $tag)
           <li>
             <a href="{!! get_tag_link($tag) !!}">{!! $tag->name !!}</a>
           </li>
         @endforeach
-      </ul>
+      @endif
+    </ul>
     @endif
   </a>
 </div>

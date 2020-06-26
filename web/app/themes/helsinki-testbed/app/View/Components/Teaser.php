@@ -14,6 +14,7 @@ class Teaser extends Component
     public $title;
     public $aria_label;
     public $excerpt;
+    public $categories;
     public $tags;
     public $permalink;
     public $thumbnail;
@@ -27,6 +28,7 @@ class Teaser extends Component
         string $label = null,
         string $ariaLabel = null,
         string $excerpt = null,
+        string $categories = null,
         string $tags = null,
         string $permalink = null,
         string $thumbnail = null,
@@ -41,6 +43,7 @@ class Teaser extends Component
         $this->title = $title ?? get_the_title($this->post);
         $this->aria_label = $ariaLabel ?? $this->title;
         $this->excerpt = $excerpt ?? get_the_excerpt($this->post);
+        $this->categories = $categories ?? get_the_category($this->post);
         $this->tags = $tags ?? get_the_tags($this->post);
         $this->permalink = $permalink ?? get_permalink($this->post);
         $this->thumbnail = $thumbnail ?? get_the_post_thumbnail($this->post, 'post-thumbnail', [

@@ -45,6 +45,10 @@
   .post.type-post & {
     max-width: var(--content-width);
   }
+
+  .page.type-page & > * {
+    max-width: var(--content-width);
+  }
 }
 
 .entry-title {

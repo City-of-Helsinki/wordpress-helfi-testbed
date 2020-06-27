@@ -64,7 +64,20 @@ p {
     font-size: 22px;
     font-weight: bold;
     color: $color-black-90;
-    margin-bottom: $spacing-layout-m;
+    margin-block-end: $spacing-3-xl;
+
+    .post.type-post {
+      margin-block-end: $spacing-2-xl;
+    }
+
+    .post.type-page {
+      margin-block-end: $spacing-3-xl;
+    }
+
+    &--light {
+      font-weight: normal;
+      font-size: inherit;
+    }
   }
 }
 

@@ -4,7 +4,14 @@
     text-align: center;
   }
 
-  &--featured {
-    margin-bottom: $spacing-layout-m !important;
+  .entry-content &--featured {
+    margin-bottom: $spacing-2-xl !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+
+    .post.type-post & {
+      margin-bottom: $spacing-5-xl !important;
+    }
   }
 }

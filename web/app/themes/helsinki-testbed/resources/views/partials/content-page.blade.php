@@ -5,9 +5,11 @@
 
   <div class="entry-content">
     @if (get_the_excerpt())
-      <p class="description alignwide">
-        {{ get_the_excerpt() }}
-      </p>
+      <x-group align="wide">
+        <p class="description description--light">
+          {{ get_the_excerpt() }}
+        </p>
+      </x-group>
     @endif
 
     @if (get_the_post_thumbnail_url())

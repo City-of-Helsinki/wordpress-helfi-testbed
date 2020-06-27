@@ -114,3 +114,11 @@ add_filter('template_include', function ($template_file) {
     }
     return $template_file;
 }, 19);
+
+add_action('template_redirect', function () {
+    global $wp_query;
+    $post_mapping_original_archive_type = get_query_var('original_archive_type');
+    if (is_page() && $post_mapping_original_archive_type === 'term') {
+        wp_redirect(get_permalink(get_the_ID()));
+    }
+});

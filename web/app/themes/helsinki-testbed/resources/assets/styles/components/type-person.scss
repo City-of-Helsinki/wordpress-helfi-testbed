@@ -1,6 +1,26 @@
+.wp-block-person-list {
+  &.layout-horizontal .person-teaser {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .person-teaser {
+  max-width: 280px;
+
+  @include mq($until: medium) {
+    width: 100%;
+    max-width: unset;
+  }
+
   figure {
     margin: 0;
+    width: 280px;
+    max-width: 100%;
+
+    @include mq($until: medium) {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -42,24 +62,23 @@
   }
 
   &.layout-horizontal {
-    @include mq($until: large) {
+    @include mq($until: xlarge) {
       figure + ul {
         margin-top: $spacing-m;
       }
     }
-    @include mq($from: large) {
+    @include mq($from: xlarge) {
       display: flex;
       align-items: center;
+      max-width: 598px;
 
       figure + ul {
         margin-left: $spacing-m;
       }
 
       figure {
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
-        max-width: 280px;
+        flex-grow: 0;
+        flex-shrink: 0;
       }
 
       ul {

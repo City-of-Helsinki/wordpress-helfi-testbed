@@ -11,7 +11,7 @@
         </li>
       @endif
       @if ($post->description)
-        <li class="person-teaser__description">{{ $post->description }}</li>
+        <li class="person-teaser__description">{!! nl2br($post->description) !!}</li>
       @endif
     </ul>
 </div>

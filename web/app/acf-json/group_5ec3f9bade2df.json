@@ -6,7 +6,7 @@
             "key": "field_5ec3f9bdb3d5a",
             "label": "Description",
             "name": "description",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,9 +17,10 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "translations": "translate"
         },
         {
             "key": "field_5ec3f9cab3d5b",
@@ -57,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593073211
+    "modified": 1593307782
 }

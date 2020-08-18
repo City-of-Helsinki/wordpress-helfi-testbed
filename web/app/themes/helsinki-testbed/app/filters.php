@@ -122,3 +122,17 @@ add_action('template_redirect', function () {
         wp_redirect(get_permalink(get_the_ID()));
     }
 });
+
+// Make excerpt mandatory for posts.
+add_filter('wp_insert_post_data', function ($data) {
+    if ('post' != $data['post_type']) {
+        return $data;
+    }
+
+    $excerpt = $data['post_excerpt'];
+    if (empty($excerpt)) {
+        $data['post_status'] = 'draft';
+    }
+
+    return $data;
+});

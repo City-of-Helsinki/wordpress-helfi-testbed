@@ -11,6 +11,8 @@
 
   <div class="entry-content">
     @if (get_the_post_thumbnail_url())
+    <div class="koro koro--basic white top">
+      </div>
       <figure class="wp-block-image alignfull size-large wp-block-image--featured">
         <img src="{{ get_the_post_thumbnail_url(null, 'large') }}">
       </figure>

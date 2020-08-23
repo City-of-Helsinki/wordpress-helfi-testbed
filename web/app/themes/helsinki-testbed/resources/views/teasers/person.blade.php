@@ -1,6 +1,10 @@
 <div class="type-{{ $post->post_type }} {{ $post->post_type }}-teaser layout-{{ $layout ?? 'vertical' }}">
   <x-image>
-    {!! get_the_post_thumbnail($post, 'post-thumbnail', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 216px']) !!}
+    @if (get_the_post_thumbnail($post))
+      {!! get_the_post_thumbnail($post, 'post-thumbnail', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 216px']) !!}
+    @else
+      <img src="{{ \Roots\asset('images/person-placeholder.png')->uri() }}" alt="{{ get_the_title($post) }}" />
+    @endif
   </x-image>
 
   <ul>

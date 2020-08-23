@@ -17,7 +17,9 @@
         {!! $thumbnail !!}
       </div>
     @else
-      <div class="teaser__thumbnail teaser__thumbnail--placeholder"></div>
+      <div class="teaser__thumbnail teaser__thumbnail--placeholder">
+        <img src="{{ \Roots\asset('images/post-placeholder.png')->uri() }}" alt="{{ $label }}" />
+      </div>
     @endif
     <div class="teaser__content">
       @if ($title)

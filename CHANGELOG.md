@@ -29,6 +29,7 @@
 - Added archive page styling
 - Added search page.
 - Added placeholder image for person list blocks.
+- Added placeholder image for post teasers.
 
 ## 0.1.0
 

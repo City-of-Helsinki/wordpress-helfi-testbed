@@ -8,6 +8,7 @@ import { createHigherOrderComponent} from '@wordpress/compose';
 import { addFilter } from '@wordpress/hooks';
 
 import './editor/blocks/icon-and-text';
+import './editor/blocks/highlight';
 
 /**
  * Forces image fill for Media & Text blocks with the hover style.

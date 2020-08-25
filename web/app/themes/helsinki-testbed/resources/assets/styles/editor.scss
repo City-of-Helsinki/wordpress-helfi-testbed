@@ -29,6 +29,10 @@ $is-frontend: false;
   }
 }
 
+.wp-block.is-reusable {
+  max-width: unset;
+}
+
 @include mq($from: large) {
   // Remove gutter to make widths match exactly
   .editor-styles-wrapper.editor-styles-wrapper {

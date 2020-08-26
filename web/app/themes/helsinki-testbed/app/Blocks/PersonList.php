@@ -33,6 +33,9 @@ class PersonList extends Block
             ->map(function ($postId) {
                 return get_post($postId);
             })
+            ->filter(function ($post) {
+                return $post->post_status == 'publish';
+            })
             ->all();
     }
 

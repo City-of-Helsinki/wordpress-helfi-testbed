@@ -14,7 +14,7 @@ import {
 } from '@wordpress/components'
 
 const DOMAIN = 'hds'
-const CLASS_NAME = `wp-block-${DOMAIN}-icon-text`
+const CLASS_NAME = `wp-block-${DOMAIN}-icon-and-text`
 
 const ICONS = ['alert-circle', 'book', 'calendar-clock', 'check', 'clock', 'cogwheel', 'envelope', 'globe', 'group', 'heart', 'home', 'ship', 'speechbubble', 'tree']
 

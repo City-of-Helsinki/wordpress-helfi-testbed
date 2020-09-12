@@ -55,7 +55,7 @@ class Navigation extends Composer
                 $item->activeAncestor = null;
                 $item->title = $language['native_name'];
                 $item->url = $language['url'];
-                $item->label = sprintf(__('In %s', 'helsinki-testbed'), $language['native_name']);
+                $item->label = sprintf(__('%s', 'helsinki-testbed'), $language['native_name']);
                 $item->disabled = $language['missing'];
                 $item->children = false;
                 return $item;

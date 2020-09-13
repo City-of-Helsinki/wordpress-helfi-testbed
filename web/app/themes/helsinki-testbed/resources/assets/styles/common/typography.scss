@@ -83,5 +83,13 @@ p {
 
 a {
   color: $color-coat-of-arms-blue;
-  // @todo what's the hover state?
+
+  &:hover {
+    background-color: #f2f2fc;
+  }
+
+  &:focus {
+    outline: solid 3px $color-coat-of-arms-blue;
+    outline-offset: 2px;
+  }
 }

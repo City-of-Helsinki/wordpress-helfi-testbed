@@ -7,20 +7,26 @@
   border-radius: 0;
   background-color: $primary-color;
 
-  &:hover,
-  &:focus {
-    background-color: darken($primary-color, 10%); // @todo
+  .wp-block-button__link {
+    &:focus {
+      outline: solid 3px $color-coat-of-arms-blue;
+      outline-offset: 2px;
+    }
   }
 
   &.is-style-outline {
     color: $primary-color;
     background-color: transparent;
 
-    &:hover,
-    &:focus {
-      color: darken($primary-color, 10%); // @todo
-      background-color: transparent;
-      text-decoration: underline;
+    .wp-block-button__link {
+      &:hover {
+        background-color: #f2f2fc;
+      }
+
+      &:focus {
+        outline: solid 3px $color-coat-of-arms-blue;
+        outline-offset: 2px;
+      }
     }
   }
 

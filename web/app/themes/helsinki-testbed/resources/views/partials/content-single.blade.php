@@ -29,6 +29,13 @@
     @endif
 
     @php(the_content())
+
+    <x-related-content
+      :type="$related->type"
+      :label="$related->label"
+      :query="$related->query"
+      :category="$related->category"
+    />
   </div>
 
   <footer>

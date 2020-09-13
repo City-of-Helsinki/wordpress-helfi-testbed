@@ -99,6 +99,7 @@ class PostTypes
     public function registerPerson()
     {
         $person = new PostType('person', [
+            'public' => false,
             'has_archive' => false,
             'show_in_rest' => true,
             'supports' => ['title', 'thumbnail'],

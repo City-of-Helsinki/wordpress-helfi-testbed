@@ -9,7 +9,11 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    height: 400px;
+    height: 300px;
+
+    @include mq($from: large) {
+      height: 400px;
+    }
 
     .post.type-post & {
       margin-bottom: $spacing-5-xl !important;

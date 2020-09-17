@@ -78,6 +78,13 @@
   php_value always_populate_raw_post_data   -1
 </IfModule>
 
+# Use staging uploads when unavailable locally
+<IfModule mod_rewrite.c>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_HOST} ^(www\.)?helsinki-testbed\.test$
+RewriteRule ^app/uploads/(.*)$ https://staging-helsinkitestbed.kinsta.cloud/app/uploads/$1 [L,R=302,NC]
+</IfModule>
+
 # BEGIN WordPress
 # The directives (lines) between `BEGIN WordPress` and `END WordPress` are
 # dynamically generated, and should only be modified via WordPress filters.

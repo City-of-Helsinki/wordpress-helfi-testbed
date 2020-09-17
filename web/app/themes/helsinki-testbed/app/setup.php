@@ -153,6 +153,9 @@ add_action('after_setup_theme', function () {
     add_theme_support('disable-custom-font-sizes');
 
     add_image_size('tiny', 50, 50, true);
+    add_image_size('wide', 1200);
+    add_image_size('xlarge', 1440);
+    add_image_size('xxlarge', 2000);
 }, 20);
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Composers\Traits;
+namespace App\View\Composers\Concerns;
 
 use WP_Post;
 

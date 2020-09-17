@@ -2,7 +2,7 @@
 
 namespace App\View\Composers;
 
-use App\View\Composers\Traits\HasPost;
+use App\View\Composers\Concerns\HasPost;
 use Roots\Acorn\View\Composer;
 use stdClass;
 use WP_Query;

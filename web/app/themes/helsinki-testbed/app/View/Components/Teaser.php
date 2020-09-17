@@ -46,8 +46,8 @@ class Teaser extends Component
         $this->categories = $categories ?? get_the_category($this->post);
         $this->tags = $tags ?? get_the_tags($this->post);
         $this->permalink = $permalink ?? get_permalink($this->post);
-        $this->thumbnail = $thumbnail ?? get_the_post_thumbnail($this->post, 'post-thumbnail', [
-                'sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 402px'
+        $this->thumbnail = $thumbnail ?? get_the_post_thumbnail($this->post, 'large', [
+                'sizes' => '(max-width: 576px) 100vw, (max-width: 992px) 50vw (max-width: 1440px) 33vw, 384px'
             ]);
         $this->custom_class = $customClass;
     }

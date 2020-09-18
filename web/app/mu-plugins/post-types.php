@@ -100,6 +100,7 @@ class PostTypes
     {
         $person = new PostType('person', [
             'public' => false,
+            'show_ui' => true,
             'has_archive' => false,
             'show_in_rest' => true,
             'supports' => ['title', 'thumbnail'],

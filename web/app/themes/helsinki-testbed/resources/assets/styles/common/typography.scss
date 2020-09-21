@@ -89,7 +89,7 @@ a {
   }
 
   &:focus {
-    outline: solid 3px $color-coat-of-arms-blue;
+    outline: auto 3px $color-coat-of-arms-blue;
     outline-offset: 2px;
   }
 }

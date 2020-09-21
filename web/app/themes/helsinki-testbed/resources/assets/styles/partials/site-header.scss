@@ -22,6 +22,10 @@
     // Offset so the text within the logo is vertically centered
     margin-bottom: -5px;
 
+    &:hover {
+      background-color: transparent;
+    }
+
     @include mq($from: large) {
       svg {
         width: 102px;

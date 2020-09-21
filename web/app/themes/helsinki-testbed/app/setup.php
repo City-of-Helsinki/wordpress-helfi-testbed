@@ -90,6 +90,9 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage')
     ]);
+    register_nav_menus([
+        'footer_navigation' => __('Footer Navigation', 'sage')
+    ]);
 
     /**
      * Enable post thumbnails
@@ -172,12 +175,27 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary'
+        'name' => __('Footer', 'sage'),
+        'id' => 'sidebar-footer'
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer'
+        'name' => __('Footer: Contact', 'sage'),
+        'id' => 'footer-contact'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Social', 'sage'),
+        'id' => 'footer-social'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Disclaimers', 'sage'),
+        'id' => 'footer-disclaimers'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Menu', 'sage'),
+        'id' => 'footer-menu'
     ] + $config);
 });

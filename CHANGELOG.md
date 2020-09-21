@@ -28,6 +28,7 @@
 - Update Gutenberg to 8.4.0 and cleanup earlier hacks
 - Added archive page styling
 - Added search page.
+- Added footer.
 - Added placeholder image for person list blocks.
 - Added placeholder image for post teasers.
 

@@ -30,6 +30,10 @@
     align-items: center;
     padding: $spacing-s $spacing-m;
 
+    &:hover {
+      background-color: transparent;
+    }
+
     // Make space for trigger
     .has-children > & {
       padding-right: ($spacing-m + $spacing-s);

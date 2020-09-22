@@ -90,20 +90,16 @@ domReady(() => {
   });
 
   registerBlockStyle('core/group', {
+    name: 'default',
+    label: 'Default',
+  })
+  registerBlockStyle('core/group', {
     name: 'koro-top-basic',
     label: 'Basic koro top',
   })
   registerBlockStyle('core/group', {
-    name: 'koro-bottom-basic',
-    label: 'Basic koro bottom',
-  })
-  registerBlockStyle('core/group', {
     name: 'koro-top-pulse',
     label: 'Pulse koro top',
-  })
-  registerBlockStyle('core/group', {
-    name: 'koro-bottom-pulse',
-    label: 'Pulse koro bottom',
   })
 
   addFilter(

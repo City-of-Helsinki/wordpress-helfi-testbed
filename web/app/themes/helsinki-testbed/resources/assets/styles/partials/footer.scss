@@ -2,15 +2,14 @@
   position: relative;
   padding: $spacing-3-xl $spacing-m;
   background-color: $color-black;
-  margin-top: 50px;
 
   &::before {
     content: ' ';
     position: absolute;
-    top: -24px;
+    top: -23px;
     left: 0;
     width: 100%;
-    height: 25px;
+    height: $footer-koro-height;
     background-repeat: repeat-x;
     background-image: svg-load('./images/koro-basic.svg', fill='#000000');
   }

@@ -5,6 +5,11 @@
   display: flex;
   flex-wrap: wrap;
 
+  [class^="wp-block"].has-background & {
+    margin: calc(var(--grid-gutter-y) / 2 * -1)
+      calc(var(--grid-gutter-x) / 2 * -1);
+  }
+
   @include mq($from: large) {
     margin:
       calc(var(--grid-gutter-y) / 2 * -1)

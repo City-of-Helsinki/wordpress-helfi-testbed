@@ -26,8 +26,32 @@
     max-width: none;
   }
 
-  > :last-child:not(.alignfull) {
-    margin-bottom: $spacing-m;
+  > :last-child {
+    // If the last child has no background, add some margin to it so that the
+    // footer's koro effect does not overlap the block's content. This also
+    // overrides the default behavior of not having bottom margin on the last
+    // block.
+    margin-bottom: calc(#{$spacing-2-xl} + #{$footer-koro-height});
+    @include breakpoint-value($block-margins) {
+      $margin: $-bp-value;
+
+      margin-bottom: calc(#{$margin} + #{$footer-koro-height});
+    }
+  }
+
+  > :last-child.has-background.alignfull {
+    // If the last child has a background and is full-aligned, override the
+    // above by adding more bottom padding to it so that the background extends
+    // to show under the footer's koro effect, without overlapping the block's
+    // content.
+    margin-bottom: 0;
+    padding-bottom: calc(#{$spacing-2-xl} + #{$footer-koro-height});
+
+    @include breakpoint-value($block-paddings) {
+      $padding: $-bp-value;
+
+      padding-bottom: calc(#{$padding} + #{$footer-koro-height});
+    }
   }
 
   > h1:first-child {

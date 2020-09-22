@@ -1,14 +1,14 @@
 :root {
   --container-width: #{$container-width-xs};
   --content-width: calc(100% - #{2 * $spacing-s});
-  --grid-gutter: 12px;
+  --grid-gutter: 24px;
   --grid-columns: 4;
   --alignwide-width: 100%;
   --contentwide-width: calc(100% - var(--grid-gutter));
 
   @include mq($from: small, $until: medium) {
     --container-width: #{$container-width-s};
-    --grid-gutter: 12px;
+    --grid-gutter: 24px;
     --grid-columns: 4;
   }
 

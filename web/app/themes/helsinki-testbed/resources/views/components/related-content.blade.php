@@ -1,5 +1,5 @@
 @if ($query->have_posts())
-  <div class="related-content wp-block-group alignfull is-style-koro-top-basic has-background has-light-grey-background-color">
+  <div class="wp-block-group alignfull is-style-koro-top-basic has-background has-light-grey-background-color related-content">
     <div class="wp-block-group__inner-container">
       <div class="{{ esc_attr($block->classes) }} alignwide" @if ($block->id || $use_pagination) id="{{ $block->id ?? 'listing' }}" @endif>
         @if($label)

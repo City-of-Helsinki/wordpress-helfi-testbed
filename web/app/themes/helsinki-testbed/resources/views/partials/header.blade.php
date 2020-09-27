@@ -1,6 +1,10 @@
 <div class="site-header">
   <a class="site-header__logo" href="{{ home_url('/') }}" rel="home" aria-label="{{ __('Go to frontpage', 'helsinki-testbed') }}">
-    @svg('images/logo/helsinki-fi.svg', '', ['width' => 67, 'height' => 31])
+    @if (mb_substr(get_locale(), 0, 2) === 'sv')
+      @svg('images/logo/helsinki-sv.svg', '', ['width' => 67, 'height' => 31])
+    @else
+      @svg('images/logo/helsinki-fi.svg', '', ['width' => 67, 'height' => 31])
+    @endif
   </a>
 
   <div class="site-header__name">

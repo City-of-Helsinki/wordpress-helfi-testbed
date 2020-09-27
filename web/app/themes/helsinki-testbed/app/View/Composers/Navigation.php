@@ -32,7 +32,11 @@ class Navigation extends Composer
 
     public function primaryNavigation(): array
     {
-        return Navi::build('primary_navigation')->toArray();
+        $navigation = Navi::build('primary_navigation')->toArray();
+        if (is_array($navigation)) {
+            return $navigation;
+        }
+        return [];
     }
 
     public function languageCode(): string
@@ -44,7 +48,7 @@ class Navigation extends Composer
     {
         $languages = apply_filters('wpml_active_languages', null, [
             'skip_missing' => 0,
-            'orderby' => 'code',
+            'orderby' => 'order',
             'order' => 'desc',
         ]);
 

@@ -4,7 +4,9 @@ import { menu, button } from './components/dropdown';
 import { toggle, toggler } from './components/toggler';
 
 if (matchMedia('(min-width: 1024px)').matches) {
-  menu(document.querySelector('.site-navigation'));
+  if (document.querySelector('.site-navigation')) {
+    menu(document.querySelector('.site-navigation'));
+  }
   button(document.querySelector('.site-languages__button'));
 } else {
   toggler(document.querySelector('.site-hamburger-button'));

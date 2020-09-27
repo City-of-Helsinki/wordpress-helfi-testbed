@@ -16,7 +16,11 @@ import {
 const DOMAIN = 'hds'
 const CLASS_NAME = `wp-block-${DOMAIN}-icon-and-text`
 
-const ICONS = ['alert-circle', 'book', 'calendar-clock', 'check', 'clock', 'cogwheel', 'envelope', 'globe', 'group', 'heart', 'home', 'ship', 'speechbubble', 'tree']
+const ICONS = [
+  'alert-circle', 'book', 'calendar-clock', 'car', 'car-wifi', 'check',
+  'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope', 'globe', 'group',
+  'heart', 'home', 'home-solar-panels', 'ship', 'speechbubble', 'tree'
+]
 
 function BlockEdit({
   attributes,

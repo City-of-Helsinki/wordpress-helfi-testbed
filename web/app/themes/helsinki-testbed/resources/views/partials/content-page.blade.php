@@ -4,14 +4,12 @@
   @endif
 
   <div class="entry-content">
-    @if (!is_front_page())
-      @if (get_the_excerpt())
-        <x-group align="wide">
-          <p class="description description--light">
-            {{ get_the_excerpt() }}
-          </p>
-        </x-group>
-      @endif
+    @if (!is_front_page() && get_the_excerpt())
+      <x-group align="wide">
+        <p class="description description--light">
+          {{ get_the_excerpt() }}
+        </p>
+      </x-group>
     @endif
 
     @if (get_the_post_thumbnail_url())
@@ -22,7 +20,7 @@
       </figure>
     @endif
 
-    @if (is_front_page())
+    @if (is_front_page() && get_the_excerpt())
       <x-group align="wide">
         <p class="description">
           {{ get_the_excerpt() }}

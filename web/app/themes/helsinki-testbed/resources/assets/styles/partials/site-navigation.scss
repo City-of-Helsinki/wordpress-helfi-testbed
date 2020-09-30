@@ -104,7 +104,8 @@
         left: 50%;
         right: 50%;
         bottom: 0;
-        border-bottom: solid 5px $color-black-90;
+        border-bottom: solid 5px;
+        border-bottom-color: transparent;
         transition: all 100ms ease-out;
       }
 
@@ -112,6 +113,7 @@
       .is-level-1[aria-expanded="true"] > &::after {
         left: 0;
         right: 0;
+        border-bottom-color: $color-black-90;
       }
 
       &:focus {

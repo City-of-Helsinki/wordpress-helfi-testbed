@@ -73,7 +73,7 @@ const withRemoveBorderRadius = createHigherOrderComponent(BlockListBlock => {
 }, 'withRemoveBorderRadius' );
 
 domReady(() => {
-  unregisterBlockStyle('core/button', 'outline');
+  unregisterBlockStyle('core/button', 'fill');
 
   registerBlockStyle('core/button', {
     name: 'outline',

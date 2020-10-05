@@ -186,9 +186,14 @@ domReady(() => {
   registerBlockStyle('core/button', {
     name: 'outline',
     label: 'Outline',
-    isDefault: true
+    isDefault: true,
   });
 
+  registerBlockStyle('core/media-text', {
+    name: 'default',
+    label: 'Default',
+    isDefault: true,
+  });
   registerBlockStyle('core/media-text', {
     name: 'hover',
     label: 'Hover',

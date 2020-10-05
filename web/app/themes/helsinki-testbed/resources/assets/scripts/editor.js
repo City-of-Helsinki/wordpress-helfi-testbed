@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import '@wordpress/edit-post';
 import domReady from '@wordpress/dom-ready';
 import {
@@ -91,6 +92,22 @@ const withRemoveBorderRadius = createHigherOrderComponent(BlockListBlock => {
     return <BlockListBlock { ...props } />;
   };
 }, 'withRemoveBorderRadius' );
+/**
+ * Ensures that Group Block is set to full align if it has any koro style.
+ */
+const withAlignFullKoroStyles = createHigherOrderComponent(BlockListBlock => {
+  return (props) => {
+    if (
+      props.name === 'core/group' &&
+      props.attributes.className &&
+      props.attributes.className.indexOf('is-style-koro') !== -1 &&
+      props.attributes.align !== 'full'
+    ) {
+      props.attributes.align = 'full'
+    }
+    return <BlockListBlock { ...props } />;
+  };
+}, 'withAlignFullKoroStyles' );
 
 var excludeBlockTypes = [
   'core/archives',
@@ -213,5 +230,9 @@ domReady(() => {
   addFilter(
     'editor.BlockListBlock', 'sage/with-default-button-style',
     withDefaultButtonStyle
+  );
+  addFilter(
+    'editor.BlockListBlock', 'sage/with-alignfull-koro-styles',
+    withAlignFullKoroStyles
   );
 });

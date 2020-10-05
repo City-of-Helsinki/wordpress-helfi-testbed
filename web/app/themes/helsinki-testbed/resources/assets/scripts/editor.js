@@ -49,9 +49,15 @@ const withDefaultButtonStyle = createHigherOrderComponent(BlockListBlock => {
   return (props) => {
     if (
       props.name === 'core/button' &&
-      props.attributes.style !== 'outline'
+      (
+        !props.attributes.className ||
+        props.attributes.className.indexOf('is-style') === -1
+      )
     ) {
-      props.attributes.style = 'outline';
+      props.attributes.className = classnames(
+        props.attributes.classname,
+        'is-style-outline'
+      )
     }
     return <BlockListBlock { ...props } />;
   };

@@ -31,6 +31,7 @@
 - Added footer.
 - Added placeholder image for person list blocks.
 - Added placeholder image for post teasers.
+- Removed various blocks and block styles.
 
 ## 0.1.0
 

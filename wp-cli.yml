@@ -28,6 +28,6 @@ require:
 
 '@production':
   ssh: helsinkitestbed@35.228.245.82:17538/www/helsinkitestbed_584/public/current/web/wp
-  url: helsinkitestbed.kinsta.cloud
+  url: testbed.helsinki
   # bin_path: $HOME/.config/composer/vendor/bin
   # php_path: /usr/bin/php72

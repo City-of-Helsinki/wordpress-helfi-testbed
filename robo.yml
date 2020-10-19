@@ -27,7 +27,7 @@ env:
     user: helsinkitestbed
     ssh: 'ssh -p 17538'
     path: '/www/helsinkitestbed_584/public/current'
-    url: 'https://helsinkitestbed.kinsta.cloud'
+    url: 'https://testbed.helsinki'
 command:
   build:
     production:

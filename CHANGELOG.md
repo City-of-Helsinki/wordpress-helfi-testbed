@@ -33,6 +33,6 @@
 - Added placeholder image for post teasers.
 - Removed various blocks and block styles.
 
-## 0.1.0
+## 0.1.0 on 3.6.2020
 
 - Added basic site structure based on Bedrock and Sage.

@@ -26,7 +26,55 @@
   "repositories": [
     { "type": "composer", "url": "https://wpackagist.org" },
     { "type": "composer", "url": "https://wp-languages.github.io/" },
-    { "type": "composer", "url": "https://packagist.minasithil.genero.fi/" }
+    { "type": "composer", "url": "https://packagist.minasithil.genero.fi/" },
+    {
+      "type": "package",
+      "package": {
+        "name": "private/advanced-custom-fields-pro",
+        "version": "5.8.11",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "./extra-plugins/generoi-advanced-custom-fields-pro.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "private/gravityforms",
+        "version": "2.4.17.20",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "./extra-plugins/generoi-gravityforms.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "private/genero-status",
+        "version": "0.0.8",
+        "type": "php-script",
+        "dist": {
+          "url": "./extra-plugins/generoi-genero-status.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "private/polylang-pro",
+        "version": "2.7.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "./extra-plugins/generoi-polylang-pro.zip",
+          "type": "zip"
+        }
+      }
+    }
   ],
   "require": {
     "php": ">=7.1",
@@ -41,8 +89,6 @@
 
     "koodimonni-language/fi": "*",
     "koodimonni-language/sv_se": "*",
-
-    "generoi/advanced-custom-fields-pro": "^5.8",
     "wpackagist-plugin/safe-svg": "^1.9",
     "wpackagist-plugin/limit-login-attempts-reloaded": "^2.6.1",
     "wpackagist-plugin/wp-sanitize-file-name-plus": "~1.0",
@@ -52,8 +98,6 @@
     "wpackagist-plugin/post-types-order": "~1.9",
     "wpackagist-plugin/taxonomy-terms-order": "^1.5",
     "wpackagist-plugin/wp-smartcrop": "~2.0",
-
-    "generoi/gravityforms": "~2.1",
     "wpackagist-plugin/gf-form-multicolumn": "^3.0",
     "wpackagist-plugin/gravity-forms-google-analytics-event-tracking": "^2.3",
 
@@ -81,7 +125,6 @@
     "wp-cli/wp-cli-bundle": "^2.2",
     "cweagans/composer-patches": "~1.0",
     "generoi/genero-conf": "~1.1",
-    "generoi/genero-status": "*",
     "consolidation/robo": "^1.3",
     "generoi/robo-genero": "^0.2.2",
 
@@ -89,11 +132,14 @@
     "wpackagist-plugin/gutenberg": "^8.0",
     "wpackagist-plugin/post-type-archive-mapping": "^4.0",
     "kinsta/kinsta-mu-plugins": "^2.3",
-    "generoi/polylang-pro": "^2.7",
     "wpackagist-plugin/theme-translation-for-polylang": "^3.2",
     "wpackagist-plugin/relevanssi": "4.7.2.1",
     "wpackagist-plugin/searchwp-live-ajax-search": "1.4.6.1",
-    "wpackagist-plugin/mandatory-excerpt": "^1.1"
+    "wpackagist-plugin/mandatory-excerpt": "^1.1",
+    "private/advanced-custom-fields-pro": "5.8.11",
+    "private/gravityforms": "2.4.17.20",
+    "private/genero-status": "0.0.8",
+    "private/polylang-pro": "2.7.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",
@@ -122,7 +168,7 @@
       "web/app/languages/": ["vendor:koodimonni-language"],
       "web/app/languages/plugins/": ["vendor:koodimonni-plugin-language"],
       "web/app/languages/themes/": ["vendor:koodimonni-theme-language"],
-      "web/": ["package:generoi/genero-status:genero-status.php"],
+      "web/": ["package:private/genero-status:genero-status.php"],
       "web/app/": [
         "package:wpackagist-plugin/wp-super-cache:advanced-cache.php",
         "type:wordpress-dropin"

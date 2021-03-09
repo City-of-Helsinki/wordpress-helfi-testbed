@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "375ae12aaf82bee830803ae462c442c5",
+    "content-hash": "9e87a62fd959b7557c942e6a63b33bb9",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2580,17 +2580,6 @@
                 "shasum": null
             },
             "type": "wordpress-plugin"
-        },
-        {
-            "name": "private/genero-status",
-            "version": "0.0.8",
-            "dist": {
-                "type": "zip",
-                "url": "./extra-plugins/generoi-genero-status.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "php-script"
         },
         {
             "name": "private/gravityforms",

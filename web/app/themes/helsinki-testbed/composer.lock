@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "032222b0e955d8a2a534c7b6095a07fa",
@@ -205,12 +205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/generoi/sage-nativeblock.git",
-                "reference": "25894c7cea699b75eadd6571415f0fd4513aead6"
+                "reference": "8f4a8002a61ca9db02b3f3982baf6773c77c9659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/generoi/sage-nativeblock/zipball/25894c7cea699b75eadd6571415f0fd4513aead6",
-                "reference": "25894c7cea699b75eadd6571415f0fd4513aead6",
+                "url": "https://api.github.com/repos/generoi/sage-nativeblock/zipball/8f4a8002a61ca9db02b3f3982baf6773c77c9659",
+                "reference": "8f4a8002a61ca9db02b3f3982baf6773c77c9659",
                 "shasum": ""
             },
             "archive": {
@@ -235,7 +235,10 @@
             "autoload": {
                 "psr-4": {
                     "Genero\\Sage\\NativeBlock\\": "src/"
-                }
+                },
+                "files": [
+                    "src/polyfill.php"
+                ]
             },
             "scripts": {
                 "test": [
@@ -256,7 +259,7 @@
                 "source": "https://github.com/generoi/sage-nativeblock/tree/master",
                 "issues": "https://github.com/generoi/sage-nativeblock/issues"
             },
-            "time": "2020-06-15T10:27:26+00:00"
+            "time": "2021-03-11T14:47:50+00:00"
         },
         {
             "name": "generoi/sage-woocommerce",

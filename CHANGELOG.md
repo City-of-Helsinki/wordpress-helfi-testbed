@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.0 on 10.6.2020
 
 - Refactored some packages to come from local files instead of private repositories.
 - Added Matomo tracking code.

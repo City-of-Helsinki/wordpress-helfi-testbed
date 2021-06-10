@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Refactored some packages to come from local files instead of private repositories.
+- Added Matomo tracking code.
 
 ## 0.2.0 on 26.6.2020
 

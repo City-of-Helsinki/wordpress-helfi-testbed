@@ -1,7 +1,7 @@
 $icons: 'angle-down', 'alert-circle', 'book', 'calendar-clock', 'car',
   'car-wifi', 'check', 'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope',
-  'globe', 'group', 'heart', 'home', 'home-solar-panels', 'ship',
-  'speechbubble', 'tree';
+  'globe', 'group', 'heart', 'home', 'home-solar-panels', 'kiertotalous',
+  'ship', 'speechbubble', 'tree';
 
 @each $icon in $icons {
   .has-#{$icon}-icon {

@@ -19,7 +19,8 @@ const CLASS_NAME = `wp-block-${DOMAIN}-icon-and-text`
 const ICONS = [
   'alert-circle', 'book', 'calendar-clock', 'car', 'car-wifi', 'check',
   'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope', 'globe', 'group',
-  'heart', 'home', 'home-solar-panels', 'ship', 'speechbubble', 'tree',
+  'heart', 'home', 'home-solar-panels', 'kiertotalous', 'ship', 'speechbubble',
+  'tree',
 ]
 
 function BlockEdit({

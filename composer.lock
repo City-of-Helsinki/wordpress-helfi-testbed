@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cec6d444eaabb6feb6c824981cfabb5",
+    "content-hash": "0e55ac7f60cc868b155d915589e48ab0",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1650,12 +1650,12 @@
             "version": "2.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/retlehs/kinsta-mu-plugins.git",
+                "url": "https://github.com/generoi/kinsta-mu-plugins.git",
                 "reference": "b17d6ad3b4f62390a03395cc4786848eb566dc73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/retlehs/kinsta-mu-plugins/zipball/b17d6ad3b4f62390a03395cc4786848eb566dc73",
+                "url": "https://api.github.com/repos/generoi/kinsta-mu-plugins/zipball/b17d6ad3b4f62390a03395cc4786848eb566dc73",
                 "reference": "b17d6ad3b4f62390a03395cc4786848eb566dc73",
                 "shasum": ""
             },
@@ -5842,6 +5842,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/akismet/"
+        },
+        {
+            "name": "wpackagist-plugin/complianz-gdpr",
+            "version": "5.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/complianz-gdpr/",
+                "reference": "tags/5.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/complianz-gdpr.5.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/complianz-gdpr/"
         },
         {
             "name": "wpackagist-plugin/debug-bar",

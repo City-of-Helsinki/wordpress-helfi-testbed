@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added kiertotalous icon.
+- Added Complianz gdpr plugin.
 
 ## 0.3.0 on 10.6.2020
 

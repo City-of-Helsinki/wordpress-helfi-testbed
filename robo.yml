@@ -68,10 +68,10 @@ command:
         - wp_stream_meta
     pull:
       options:
-        target: '@dev'
+        target: '@docker'
     push:
       options:
-        source: '@dev'
+        source: '@docker'
   files:
     options:
       options:

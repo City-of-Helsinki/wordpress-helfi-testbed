@@ -4,5 +4,5 @@ services:
     environment:
       - DATABASE_URL=mysql://db:db@db/db
       - WP_CORE=/var/www/html/web/wp
-      - WP_HOME=http://<example-project>.ddev.local
-        # - DOMAIN_CURRENT_SITE=<example-project>.ddev.local
+      - WP_HOME=http://helsinki-testbed.ddev.site
+        # - DOMAIN_CURRENT_SITE=helsinki-testbed.ddev.local

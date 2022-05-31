@@ -57,6 +57,47 @@
   > h1:first-child {
     margin-top: $spacing-m;
   }
+
+  .share {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      margin-right: $spacing-s;
+      margin-bottom: $spacing-2-xs;
+      white-space: nowrap;
+      line-height: 40px;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      .icon {
+        margin-right: $spacing-2-xs;
+        border-radius: 50%;
+        border: 2px solid black;
+        width: 40px;
+        height: 40px;
+        padding: 7.5px;
+      }
+
+      .text {
+        text-decoration: underline;
+      }
+
+      a:hover .text {
+        background-color: #f2f2fc;
+      }
+    }
+  }
 }
 
 .entry-header {

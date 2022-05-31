@@ -28,6 +28,48 @@
       </p>
     @endif
 
+    <ul class="share">
+      <li>
+        <a
+          class="share-button share-button--facebook"
+          href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(get_permalink()) }}"
+          target="_blank"
+          title="{{ __('Share on Facebook', 'gds') }}"
+          aria-label="{{ __('Share on Facebook', 'gds') }}"
+          rel="nofollow"
+        >
+          <img class="icon" src="{{ \Roots\Asset('/images/fontawesome/facebook-f-brands.svg') }}" />
+          <span class="text">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="share-button share-button--linkedin"
+          href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(get_permalink()) }}"
+          target="_blank"
+          title="{{ __('Share on LinkedIn', 'gds') }}"
+          aria-label="{{ __('Share on LinkedIn', 'gds') }}"
+          rel="nofollow"
+        >
+          <img class="icon" src="{{ \Roots\Asset('/images/fontawesome/linkedin-in-brands.svg') }}" />
+          <span class="text">LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/intent/tweet?text={{ urlencode(sprintf('%s %s', get_the_title(), get_permalink())) }}"
+          target="_blank"
+          title="{{ __('Share on Twitter', 'hds') }}"
+          aria-label="{{ __('Share on Twitter', 'hds') }}"
+          rel="nofollow"
+        >
+          <img class="icon" src="{{ \Roots\Asset('/images/fontawesome/twitter-brands.svg') }}" />
+          <span class="text">Twitter</span>
+        </a>
+      </li>
+    </ul>
+
+
     @php(the_content())
 
   </div>

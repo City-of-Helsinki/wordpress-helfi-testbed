@@ -40,6 +40,21 @@ class ContentList extends Block
             'paged' => get_field('use_pagination') ? (get_query_var('paged') ?: 1) : null,
         ];
 
+        if (get_field('exclude_quiet_posts')) {
+            $query['meta_query'][] = [
+                'relation' => 'OR',
+                [
+                    'key' => 'quiet_post',
+                    'compare' => 'NOT EXISTS'
+                ],
+                [
+                    'key' => 'quiet_post',
+                    'value' => '1',
+                    'compare' => '!='
+                ],
+            ];
+        }
+
         if ($category = get_field('category')) {
             $query['tax_query'][] = [
                 'taxonomy' => 'category',

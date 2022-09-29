@@ -132,6 +132,26 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_6335b5fda4ddd",
+            "label": "",
+            "name": "exclude_quiet_posts",
+            "type": "true_false",
+            "instructions": "Posts marked as \"quiet\" will not be published to this content list",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Exclude quiet posts",
+            "default_value": 0,
+            "ui": 0,
+            "translations": "copy_once",
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -151,5 +171,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592962298
+    "modified": 1664464889
 }

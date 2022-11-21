@@ -2,11 +2,7 @@
   <div class="footer">
     <div class="footer__above">
       <div class="footer__logo">
-        @if (mb_substr(get_locale(), 0, 2) === 'sv')
-          @svg('images/logo/helsinki-sv.svg', '', ['width' => 67, 'height' => 31])
-        @else
-          @svg('images/logo/helsinki-fi.svg', '', ['width' => 67, 'height' => 31])
-        @endif
+        <img src="{{ \Roots\asset('images/logo/business-helsinki.png')->uri() }}"/>
       </div>
       <div class="footer__menu">
         @php(dynamic_sidebar('footer-menu'))

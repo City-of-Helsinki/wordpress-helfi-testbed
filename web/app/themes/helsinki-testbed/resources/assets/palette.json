@@ -78,5 +78,15 @@
     "name": "Black",
     "slug": "black",
     "color": "#000000"
+  },
+  {
+    "name": "Fog",
+    "slug": "c-fog",
+    "color": "#9fc9eb"
+  },
+  {
+    "name": "Gold",
+    "slug": "c-coat-of-arms-gold",
+    "color": "#c2a251"
   }
 ]

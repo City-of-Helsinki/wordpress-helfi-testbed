@@ -119,6 +119,28 @@ $content-overlap-amount-mobile: 32;
   }
 }
 
+.wp-block-media-text.is-style-balance-centered {
+  // Force 50/50 split of media text on non-mobile.
+  @media (min-width: #{$break-small + 1}) {
+    grid-template-columns: 1fr 50% !important;
+
+    &.has-media-on-the-right {
+      grid-template-columns: 50% 1fr !important;
+    }
+  }
+
+  .wp-block-media-text__media {
+    align-self: start;
+  }
+
+  .wp-block-media-text__content {
+    .wp-block-buttons {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Mobile styles are identical for "Hover" and "Hover full width" styles.
 .wp-block-media-text.is-style-hover,
 .wp-block-media-text.is-style-hover-full {

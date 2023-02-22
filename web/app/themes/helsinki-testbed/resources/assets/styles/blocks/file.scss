@@ -1,0 +1,6 @@
+.entry-content > [class^="wp-block"] {
+  &.is-style-inner-block {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

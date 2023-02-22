@@ -206,15 +206,20 @@ domReady(() => {
   registerBlockStyle('core/group', {
     name: 'default',
     label: 'Default',
-  })
+  });
   registerBlockStyle('core/group', {
     name: 'koro-top-basic',
     label: 'Basic koro top',
-  })
+  });
   registerBlockStyle('core/group', {
     name: 'koro-top-pulse',
     label: 'Pulse koro top',
-  })
+  });
+
+  registerBlockStyle('core/file', {
+    name: 'inner-block',
+    label: 'Inner block',
+  });
 
   addFilter(
     'editor.BlockListBlock', 'sage/with-forced-image-fill',

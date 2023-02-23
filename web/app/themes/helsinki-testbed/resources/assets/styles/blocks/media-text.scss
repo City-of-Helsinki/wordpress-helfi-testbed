@@ -5,8 +5,7 @@ $content-overlap-amount-mobile: 32;
 .wp-block-media-text {
 
   // Apply below styles to the default media text block only
-  &:not(.is-style-hover),
-  &:not(.is-style-hover-full) {
+  &:not(.is-style-hover):not(.is-style-hover-full) {
     .wp-block-media-text__media {
       align-self: start;
     }

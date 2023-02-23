@@ -3,12 +3,18 @@
 $content-overlap-amount-mobile: 32;
 
 .wp-block-media-text {
-  // Force specific ratio between sides on non-mobile.
-  @media (min-width: #{$break-small + 1}) {
-    grid-template-columns: 1fr 30% !important;
 
-    &.has-media-on-the-right {
-      grid-template-columns: 30% 1fr !important;
+  // Apply below styles to the default media text block only
+  &:not(.is-style-hover),
+  &:not(.is-style-hover-full) {
+    .wp-block-media-text__media {
+      align-self: start;
+    }
+
+    .wp-block-media-text__content {
+      > .wp-block-buttons {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -38,7 +44,7 @@ $content-overlap-amount-mobile: 32;
   }
 
   // Desktop styles.
-  @media (min-width: #{$break-small + 1}) {
+  @include mq($from: small) {
     // Add some vertical padding to the block so that it doesn't overlap other
     // elements on the page, even with the image over-extending the block.
     padding-top: #{$image-overextend-amount * 1px};
@@ -87,7 +93,7 @@ $content-overlap-amount-mobile: 32;
   }
 
   // Desktop styles.
-  @media (min-width: #{$break-small + 1}) {
+  @include mq($from: small) {
     // Makes the image part stretch both columns so that it spans the entire
     // background.
     & > figure {
@@ -119,31 +125,19 @@ $content-overlap-amount-mobile: 32;
   }
 }
 
-.wp-block-media-text.is-style-balance-centered {
-  // Force 50/50 split of media text on non-mobile.
-  @media (min-width: #{$break-small + 1}) {
-    grid-template-columns: 1fr 50% !important;
-
-    &.has-media-on-the-right {
-      grid-template-columns: 50% 1fr !important;
-    }
-  }
-
-  .wp-block-media-text__media {
-    align-self: start;
-  }
-
-  .wp-block-media-text__content {
-    .wp-block-buttons {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
 // Mobile styles are identical for "Hover" and "Hover full width" styles.
 .wp-block-media-text.is-style-hover,
 .wp-block-media-text.is-style-hover-full {
+
+  // Force specific ratio between sides on non-mobile if is style hover
+  @include mq($from: small) {
+    grid-template-columns: 1fr 30% !important;
+
+    &.has-media-on-the-right {
+      grid-template-columns: 30% 1fr !important;
+    }
+  }
+
   // Mobile styles.
   @media (max-width: $break-small) {
     // Sets padding around content and moves it so it overlaps the image.

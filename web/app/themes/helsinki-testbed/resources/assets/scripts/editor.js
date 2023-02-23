@@ -202,10 +202,6 @@ domReady(() => {
     name: 'hover-full',
     label: 'Hover full width',
   });
-  registerBlockStyle('core/media-text', {
-    name: 'balance-centered',
-    label: 'Balance centered',
-  });
 
   registerBlockStyle('core/group', {
     name: 'default',

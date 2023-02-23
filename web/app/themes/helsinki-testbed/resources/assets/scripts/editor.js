@@ -216,11 +216,6 @@ domReady(() => {
     label: 'Pulse koro top',
   });
 
-  registerBlockStyle('core/file', {
-    name: 'inner-block',
-    label: 'Inner block',
-  });
-
   addFilter(
     'editor.BlockListBlock', 'sage/with-forced-image-fill',
     withForcedImageFill

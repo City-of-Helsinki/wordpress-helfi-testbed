@@ -15,6 +15,15 @@ $content-overlap-amount-mobile: 32;
         margin-top: 0;
       }
     }
+
+    @media (max-width: $break-small) {
+      &.has-media-on-the-right .wp-block-media-text__content {
+        padding-bottom: $spacing-m;
+      }
+      &:not(.has-media-on-the-right) .wp-block-media-text__content {
+        padding-top: $spacing-m;
+      }
+    }
   }
 }
 
